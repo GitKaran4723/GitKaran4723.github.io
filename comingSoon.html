@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/webimages/logo.jpg" type="image/x-icon">
+    <title>Coming Soon</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            width: 100vw!important;
+        }
+
+        nav {
+            background-image: url('webimages/navback.jpg');
+            /* Replace 'your-background-image.jpg' with the path to your image */
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: #fff;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 40px;
+            /* Adjust the size of the logo */
+            margin-right: 10px;
+            border-radius: 50%;
+        }
+
+        .brand-name {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .desktop-menu {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .desktop-menu li {
+            margin-right: 20px;
+            font-size: 1.3rem;
+        }
+
+        .mobile-menu-icon {
+            display: none;
+            /* Initially hidden on desktop view */
+            cursor: pointer;
+            font-size: 1.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .desktop-menu {
+                display: none;
+                /* Hide desktop menu on mobile view */
+            }
+
+            .mobile-menu-icon {
+                display: block;
+                /* Show mobile menu icon on mobile view */
+            }
+        }
+
+        .mobile-menu a {
+            padding: 15px;
+            color: #fff;
+            text-decoration: none;
+            display: block;
+        }
+
+        /* Show mobile menu when checkbox is checked */
+        #menu-toggle:checked+.mobile-menu {
+            display: flex;
+        }
+
+        .mobile-menu {
+            display: none;
+            flex-direction: column;
+            background-color: rgb(35, 23, 79);
+            position: absolute;
+            top: 60px;
+            left: 0;
+            width: 100%;
+            border-bottom: #fff 2px solid;
+            align-items: center;
+        }
+
+        .mobile-menu a {
+            padding: 15px;
+            color: #fff;
+            text-decoration: none;
+            display: block;
+            border-bottom: #fff 2px solid;
+        }
+
+        /* Show mobile menu when clicked */
+        .show-mobile-menu {
+            display: flex !important;
+        }
+
+        footer {
+            background-color: rgb(14, 14, 36);
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            bottom: 0;
+            
+        }
+
+        #main-body {
+            background-image: url('webimages/webBack.jpg');
+            /* Replace 'your-background-image.jpg' with the path to your image */
+            background-repeat: no-repeat;
+            background-size: cover;
+
+        }
+
+        .content {
+            flex: 1;
+            padding: 20px;
+            /* Add padding or margins as needed */
+            text-align: center;
+            color: #333;
+            background-image: url('webimages/webBack.jpg');
+            /* Replace 'your-background-image.jpg' with the path to your image */
+            background-repeat: no-repeat;
+            background-size: cover;
+
+        }
+
+        .message {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+
+        .button-section button {
+            padding: 10px;
+            font-size: 1rem;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            color: #fff;
+            margin: 1%;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        #headMsg {
+            font-size: 5vw;
+            background-color: rgba(138, 43, 226, 0.7);
+            /* BlueViolet with 70% opacity */
+            border-radius: 10px;
+            /* Adjust the border-radius as needed */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            /* Box shadow for a subtle effect */
+
+            padding: 20px;
+            /* Adjust padding as needed */
+            color: #fff;
+            /* Text color to ensure readability on the semi-transparent background */
+        }
+
+        .buttonContainer {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .subHeading {
+            color: #333;
+        }
+
+        .buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        #footer-container {
+            background-color: rgb(2, 3, 49);
+            padding: 20px;
+            
+            text-align: center;
+        }
+
+        #footer-container img {
+            max-width: 6vw;
+            /* Ensures the image is responsive */
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            /* Centers the image */
+            border-radius: 50%;
+        }
+
+        #footer-container p {
+            margin: 10px 0;
+
+        }
+
+        #social-icons-container {
+            display: flex;
+            justify-content: center;
+            /* Centers the icons horizontally */
+            align-items: center;
+            /* Centers the icons vertically */
+            margin-top: 10px;
+        }
+
+        #social-icons-container a {
+            margin: 0 10px;
+            display: block;
+            /* Ensures each icon is on a new line for mobile view */
+        }
+
+        .logo-brand {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        @media (max-width: 768px) {
+            .buttons {
+                flex-direction: column;
+            }
+
+            
+        }
+        .comingSoon{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 70vh; 
+            margin: 10vw;
+        }
+        .comingSoon h1{
+            font-size: 5vw;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">
+            <img src="webimages/logo.jpg" alt="Logo">
+            <div class="brand-name">KJ Notion</div>
+        </div>
+
+
+        <label class="mobile-menu-icon">&#9776;</label>
+
+        <ul class="desktop-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+        </ul>
+
+        <div class="mobile-menu">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Me</a>
+        </div>
+    </nav>
+
+    <div class="comingSoon">
+        <h1>Coming Soon!</h1>
+        <p>We're working on something exciting. Stay tuned for updates!</p>
+    </div>
+
+    <footer id="footer-container">
+        <div class="logo-brand">
+            <img src="webimages/logo.jpg" alt="Your Logo">
+            <p>KJ Notion</p>
+        </div>
+        <!-- Developer information -->
+        <p>Developed by Karan Jadhav</p>
+        <p>(Join me on)</p>
+        <!-- Social media icons with links -->
+        <div id="social-icons-container">
+            <a href="https://www.facebook.com/profile.php?id=61553777812612&mibextid=ZbWKwL" target="_blank"
+                rel="noopener noreferrer">
+                <img src="webimages/face.jpeg" alt="Facebook">
+            </a>
+            <a href="https://www.instagram.com/karanjadhav_11" target="_blank" rel="noopener noreferrer">
+                <img src="webimages/insta.jpg" alt="Instagram">
+            </a>
+            <a href="https://www.youtube.com/@codej4723" target="_blank" rel="noopener noreferrer">
+                <img src="webimages/yutube.jpg" alt="YouTube">
+            </a>
+            <a href="https://www.linkedin.com/in/karan-jadhav-03b5a329b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                target="_blank" rel="noopener noreferrer">
+                <img src="webimages/linkdin.png" alt="LinkedIn">
+            </a>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript to toggle mobile menu visibility
+        document.addEventListener('DOMContentLoaded', function () {
+            var mobileMenu = document.querySelector('.mobile-menu');
+
+            document.addEventListener('click', function (event) {
+                var isMobileMenuIcon = event.target.classList.contains('mobile-menu-icon');
+                var isMobileMenuLink = event.target.closest('.mobile-menu a');
+
+                if (isMobileMenuIcon || isMobileMenuLink) {
+                    // Toggle the visibility of the mobile menu
+                    mobileMenu.classList.toggle('show-mobile-menu');
+                } else {
+                    // Hide the mobile menu if clicking outside the menu icon and links
+                    mobileMenu.classList.remove('show-mobile-menu');
+                }
+            });
+        });
+
+        function gotopage(url) {
+            window.location.href = url
+        }
+
+
+
+    </script>
+</body>
+
+</html>

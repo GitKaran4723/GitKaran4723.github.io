@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/webimages/logo.jpg" type="image/x-icon">
+    <title>Current Affairs</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            width: 100vw!important;
+        }
+
+
+        .content {
+            flex: 1;
+            padding: 20px;
+            /* Add padding or margins as needed */
+            text-align: center;
+            color: #333;
+            background-image: url('webimages/webBack.jpg');
+            /* Replace 'your-background-image.jpg' with the path to your image */
+            background-repeat: no-repeat;
+            background-size: cover;
+
+        }
+
+        .message {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        #headMsg {
+            font-size: 5vw;
+            background-color: rgba(138, 43, 226, 0.7);
+            /* BlueViolet with 70% opacity */
+            border-radius: 10px;
+            /* Adjust the border-radius as needed */
+            box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.5);
+            /* Box shadow for a subtle effect */
+
+            padding: 20px;
+            /* Adjust padding as needed */
+            color: #fff;
+            /* Text color to ensure readability on the semi-transparent background */
+        }
+
+        .buttonContainer {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .subHeading {
+            color: #333;
+        }
+        
+       
+        /* added later */
+        .tileDive {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            background-color: rgba(60, 79, 222, 0.34);
+            box-shadow: 0px 0px 7px 7px rgb(57, 52, 52);  
+        }
+
+        .tile {
+            background-color: #333;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            width: 200px;
+            margin: 2%;
+            height: 200px;
+            box-sizing: border-box;
+            color: white;
+            border-radius: 20px;
+            text-align: center;
+            transition: transform 0.3s;
+            font-weight: bold;
+            font-size: 3vm;
+            font-size: 1rem;
+        }
+
+        .tile:hover {
+            transform: scale(1.1);
+            cursor: pointer;
+        }
+
+        h2 {
+            color: #fff; /* Text color for better visibility on colored backgrounds */
+        }
+
+        p {
+            color: #fff; /* Text color for better visibility on colored backgrounds */
+        }
+
+        /* Different colors for each tile */
+        .tile:nth-child(2) {
+            background-color: #3498db; /* Blue */
+        }
+
+        .tile:nth-child(1) {
+            background-color: #e74c3c; /* Red */
+        }
+        .tile:nth-child(3) {
+            background-color: #2ecc71; /* Green */
+        }
+
+        .tile:nth-child(4) {
+            background-color: #f39c12; /* Orange */
+        }
+
+        /* Responsive styles for phones */
+        @media screen and (max-width: 600px) {
+            .tile {
+                width: 40vw;
+                height: 20vw;
+                margin: 10px 0;
+                
+            }
+        }
+        
+    </style>
+</head>
+
+<body>
+
+    <div class="content">
+        <div class="message">
+            <p id="headMsg">Find Daily current affairs notes here</p>
+        </div>
+
+        <div class="button-section">
+            <div class="buttonContainer">
+                <h3 class="subHeading">The Hindu</h1>
+                    <div class="tileDive">
+                        <button class="tile" onclick="gotopage('/CurrentAffairs/December2023/dec2023.html')">December 2023</button>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <script>
+        function gotopage(url) {
+            window.location.href = url
+        }
+    </script>
+</body>
+
+</html>

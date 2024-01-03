@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NPTEL Courses</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        .subject-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .subject-item {
+            margin-bottom: 10px;
+        }
+        .subject-button,
+        .subject-link-button {
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-bottom: 10px;
+            align-self: center;
+            font-weight: bold;
+            width: 80%; /* Full width by default */
+        }
+        .subject-link-button {
+            text-align: left; /* Align text to the left */
+            background-color: #13038e;
+            color: #fff;
+        }
+        .part-list {
+            list-style-type: none;
+            padding-left: 20px;
+            margin-bottom: 10px;
+        }
+        .part-list .subject-link-button {
+            background-color: blue;
+        }
+
+        
+    </style>
+    </style>
+</head>
+<body>
+    <h1><a href="https://nptel.ac.in/courses">NPTEL Courses (Main Website)</a></h1>
+    <a href="OldSem.html">Older Sem</a>
+    <ul class="subject-list">
+        <li class="subject-item">
+            <button onclick="openLink('https://nptel.ac.in/courses/106106202')" class="subject-link-button">Machine Learning</button>
+        </li>
+        <li class="subject-item">
+            <button onclick="openLink('https://nptel.ac.in/courses/106105167')" class="subject-link-button">Cloud Computing</button>
+        </li>
+        <li class="subject-item">
+            <button onclick="openLink('https://nptel.ac.in/courses/106105182')" class="subject-link-button">Software Engineering</button>
+        </li>
+        <li class="subject-item">
+            <h2>Information Security</h2>
+            <ul class="part-list">
+                <li><button onclick="openLink('https://nptel.ac.in/courses/106106129')" class="subject-link-button">Part 1</button></li>
+                <li><button onclick="openLink('https://nptel.ac.in/courses/106106141')" class="subject-link-button">Part 2</button></li>
+                <li><button onclick="openLink('https://nptel.ac.in/courses/106106157')" class="subject-link-button">Part 3</button></li>
+                <li><button onclick="openLink('https://nptel.ac.in/courses/106106178')" class="subject-link-button">Part 4</button></li>
+                <li><button onclick="openLink('https://nptel.ac.in/courses/106106199')" class="subject-link-button">Part 5</button></li>
+            </ul>
+        </li>
+        <li class="subject-item">
+            <button onclick="openLink('https://nptel.ac.in/courses/106104189')" class="subject-link-button">Big Data Computing</button>
+        </li>
+        <li class="subject-item">
+            <button onclick="openLink('https://nptel.ac.in/courses/112105316')" class="subject-link-button">Product Engg. and Design Thinking</button>
+        </li>
+        <li class="subject-item">
+            <button onclick="openLink('https://nptel.ac.in/courses/106101163')" class="subject-link-button">Software Testing</button>
+        </li>
+        <li class="subject-item">
+            <button onclick="openLink('https://nptel.ac.in/courses/106105218')" class="subject-link-button">Software Project Management</button>
+        </li>
+        <li class="subject-item">
+            <button onclick="openLink('https://nptel.ac.in/courses/106106156')" class="subject-link-button">Introduction to Modern Application Development</button>
+        </li>
+        <!-- Add more subjects as needed -->
+    </ul>
+    <script>
+        
+        function openLink(link) {
+            window.location.href = link;
+        }
+    </script>
+</body>
+</html>

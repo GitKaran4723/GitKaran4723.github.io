@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/webimages/myphoto.jpg" type="image/x-icon">
+    <title>About Me</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            width: 100vw!important;
+        }
+
+        nav {
+            background-image: url('webimages/navback.jpg');
+            /* Replace 'your-background-image.jpg' with the path to your image */
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: #fff;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 40px;
+            /* Adjust the size of the logo */
+            margin-right: 10px;
+            border-radius: 50%;
+        }
+
+        .brand-name {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .desktop-menu {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .desktop-menu li {
+            margin-right: 20px;
+            font-size: 1.3rem;
+        }
+
+        .mobile-menu-icon {
+            display: none;
+            /* Initially hidden on desktop view */
+            cursor: pointer;
+            font-size: 1.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .desktop-menu {
+                display: none;
+                /* Hide desktop menu on mobile view */
+            }
+
+            .mobile-menu-icon {
+                display: block;
+                /* Show mobile menu icon on mobile view */
+            }
+        }
+
+        .mobile-menu a {
+            padding: 15px;
+            color: #fff;
+            text-decoration: none;
+            display: block;
+        }
+
+        /* Show mobile menu when checkbox is checked */
+        #menu-toggle:checked+.mobile-menu {
+            display: flex;
+        }
+
+        .mobile-menu {
+            display: none;
+            flex-direction: column;
+            background-color: rgb(35, 23, 79);
+            position: absolute;
+            top: 60px;
+            left: 0;
+            width: 100%;
+            border-bottom: #fff 2px solid;
+            align-items: center;
+        }
+
+        .mobile-menu a {
+            padding: 15px;
+            color: #fff;
+            text-decoration: none;
+            display: block;
+            border-bottom: #fff 2px solid;
+        }
+
+        /* Show mobile menu when clicked */
+        .show-mobile-menu {
+            display: flex !important;
+        }
+
+        footer {
+            background-color: rgb(14, 14, 36);
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            bottom: 0;
+        }
+
+        #main-body {
+            background-image: url('webimages/webBack.jpg');
+            /* Replace 'your-background-image.jpg' with the path to your image */
+            background-repeat: no-repeat;
+            background-size: cover;
+
+        }
+
+        .content {
+            flex: 1;
+            padding: 20px;
+            /* Add padding or margins as needed */
+            text-align: center;
+            color: #333;
+            background-image: url('webimages/webBack.jpg');
+            /* Replace 'your-background-image.jpg' with the path to your image */
+            background-repeat: no-repeat;
+            background-size: cover;
+
+        }
+
+        .message {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+
+        .button-section button {
+            padding: 10px;
+            font-size: 1rem;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        #headMsg {
+            font-size: 5vw;
+            background-color: rgba(138, 43, 226, 0.7);
+            /* BlueViolet with 70% opacity */
+            border-radius: 10px;
+            /* Adjust the border-radius as needed */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            /* Box shadow for a subtle effect */
+
+            padding: 20px;
+            /* Adjust padding as needed */
+            color: #fff;
+            /* Text color to ensure readability on the semi-transparent background */
+        }
+
+        .buttonContainer {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .subHeading {
+            color: #333;
+        }
+
+        .buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .mainButton {
+            background-color: #3498db;
+            color: #fff;
+            margin: 1%;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+
+            box-sizing: border-box;
+            /* Include padding and border in the width calculation */
+        }
+
+
+        #footer-container {
+            background-color: rgb(2, 3, 49);
+            padding: 20px;
+            
+            text-align: center;
+        }
+
+        #footer-container img {
+            max-width: 6vw;
+            /* Ensures the image is responsive */
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            /* Centers the image */
+            border-radius: 50%;
+        }
+
+        #footer-container p {
+            margin: 10px 0;
+
+        }
+
+        #social-icons-container {
+            display: flex;
+            justify-content: center;
+            /* Centers the icons horizontally */
+            align-items: center;
+            /* Centers the icons vertically */
+            margin-top: 10px;
+        }
+
+        #social-icons-container a {
+            margin: 0 10px;
+            display: block;
+            /* Ensures each icon is on a new line for mobile view */
+        }
+
+        .logo-brand {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        @media (max-width: 768px) {
+            .buttons {
+                flex-direction: column;
+            }
+
+            
+        }
+
+        .content img {
+            height: 40vw;
+            border-radius: 50%;
+            border: black solid 2px;
+        }
+
+        .content p {
+            font-weight: bold;
+            color: black;
+        }
+
+        .section p,
+        li {
+            font-weight: bold;
+            color: black;
+        }
+
+        strong {
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">
+            <img src="webimages/logo.jpg" alt="Logo">
+            <div class="brand-name">KJ Notion</div>
+        </div>
+
+
+        <label class="mobile-menu-icon">&#9776;</label>
+
+        <ul class="desktop-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="comingSoon.html">Contact</a></li>
+        </ul>
+
+        <div class="mobile-menu">
+            <a href="index.html">Home</a>
+            <a href="comingSoon.html">Contact</a>
+        </div>
+    </nav>
+
+    <div class="content">
+        <h1>About Me</h1>
+        <img src="webimages/myphoto.jpg" alt="Your Name">
+
+        <p>
+            I am currently pursuing MCA at MSRIT, Bangalore, in my final year. My interests include web development,
+            YouTube video making, and playing football.
+        </p>
+
+
+        <div class="section">
+            <h2>Educational Background</h2>
+            <p>
+                I have completed my class 10 with 10 CGPA in Sainik School Bijapur(Karnataka). Class 12th in the same
+                school with a 79.4%. Completed B.Sc.(PCM) in KLE's B.K. College Chikodoi with 91.92% and now I am
+                currently pursuing my Master of Computer Applications (MCA) at MSRIT, Bangalore, and I am in my
+                final year. I have a strong academic background with a focus on gaining as much as Knowledge possible
+                apart from the syllabus.
+            </p>
+            <!-- Add any academic achievements or special projects here -->
+        </div>
+
+        <!-- Skills -->
+        <div class="section">
+            <h2>Skills</h2>
+            <ul>
+                <li>Web Technology: HTML, CSS, JavaScript, Reactjs, Expressjs, Nodejs etc.</li>
+                <li>Programming Languages: C, C++, Java, Python</li>
+                <li>Tools and Technologies: Cloud Computing(AWS), SQL, Android Studio, </li>
+            </ul>
+        </div>
+
+        <!-- Work Experience -->
+        <div class="section">
+            <h2>Work Experience</h2>
+            <p>
+                I have gained valuable experience through projects and work opportunities. One notable experience
+                includes Woking in a team to develop website for exam monitoring system.
+            </p>
+            <!-- Add more work experiences if applicable -->
+        </div>
+
+        <!-- Projects -->
+        <div class="section">
+            <h2>Projects</h2>
+            <div class="project">
+
+                <p><strong>Project 1: Digi-Fashion (A E-commerce web application):</strong><br>
+                    Developed an application that could register customers and suppliers, customers could order items
+                    and employees could deliver items, all these events could be monitored by the manager.</p>
+            </div>
+            <div class="project">
+
+                <p><strong>Project 2: IoT project (Solar powered smart home system):</strong><br>
+                    A model was Developed that could store electric power from the solar panels and use it efficiently
+                    using various sensors fitted in the home this could reduce the amount of electricity used.</p>
+            </div>
+            <div class="project">
+
+                <p><strong>Project 3 - Grade Generator:</strong><br>
+                    This application could take data from the user and Grade could be calculated and stored it in the
+                    local storage.</p>
+            </div>
+            <!-- Add more projects if applicable -->
+        </div>
+
+        <!-- Hobbies and Interests -->
+        <div class="section">
+            <h2>Hobbies and Interests</h2>
+            <p>
+                In addition to my academic and professional pursuits, I am passionate about playing football. I believe
+                in maintaining a healthy work-life balance, and football serves as a great way to unwind and stay
+                active.
+            </p>
+            <!-- Add any other hobbies or interests -->
+        </div>
+
+        <!-- Web Development Journey -->
+        <div class="section">
+            <h2>Web Development Journey</h2>
+            <p>
+                My journey into web development started with a fascination for creating interactive and visually
+                appealing websites. I am particularly interested in Reactjs, Nodejs android Application Development.
+            </p>
+            <!-- Add any other relevant information about your web development journey -->
+        </div>
+
+        <!-- YouTube Channel Details -->
+        <div class="section">
+            <h2>YouTube Channel</h2>
+            <p>
+                On my YouTube channel, I create content focused on Computer science. Viedeos are not uploaded frequently
+                but I manage to upload one or two videos on weekly basis.
+            </p>
+            <!-- Add any other relevant information about your YouTube channel -->
+        </div>
+
+        <!-- Contact Information -->
+        <div class="section contact-info">
+            <h2>Contact Information</h2>
+            <p>
+                For professional inquiries or collaboration opportunities, feel free to reach out to me:
+            </p>
+            <p><strong>Email:</strong> karansj4723@gmail.com <br>
+                <strong>Pnone Number:</strong> +918147147632
+            </p>
+        </div>
+
+        <!-- Quotes or Personal Motto -->
+        <div class="section">
+            <h2>Personal Motto</h2>
+            <p>
+                "Find a new version of you, every passing hour."
+            </p>
+        </div>
+
+        <!-- Achievements and Recognition -->
+
+
+        <!-- Volunteer Work -->
+        <div class="section">
+            <h2>Volunteer Work</h2>
+            <p>
+                Volunteered as a Science teacher in a High-school.
+            </p>
+            <!-- Add more details about your volunteer work if applicable -->
+        </div>
+
+    </div>
+    </div>
+
+    <footer id="footer-container">
+        <!-- Your logo and brand -->
+        <div class="logo-brand">
+            <img src="webimages/logo.jpg" alt="Your Logo">
+            <p>KJ Notion</p>
+        </div>
+
+
+        <!-- Developer information -->
+        <p>Developed by Karan Jadhav</p>
+        <p>(Join me on)</p>
+        <!-- Social media icons with links -->
+        <div id="social-icons-container">
+            <a href="https://www.facebook.com/profile.php?id=61553777812612&mibextid=ZbWKwL" target="_blank"
+                rel="noopener noreferrer">
+                <img src="webimages/face.jpeg" alt="Facebook">
+            </a>
+            <a href="https://www.instagram.com/karanjadhav_11" target="_blank" rel="noopener noreferrer">
+                <img src="webimages/insta.jpg" alt="Instagram">
+            </a>
+            <a href="https://www.youtube.com/@codej4723" target="_blank" rel="noopener noreferrer">
+                <img src="webimages/yutube.jpg" alt="YouTube">
+            </a>
+            <a href="https://www.linkedin.com/in/karan-jadhav-03b5a329b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                target="_blank" rel="noopener noreferrer">
+                <img src="webimages/linkdin.png" alt="LinkedIn">
+            </a>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript to toggle mobile menu visibility
+        document.addEventListener('DOMContentLoaded', function () {
+            var mobileMenu = document.querySelector('.mobile-menu');
+
+            document.addEventListener('click', function (event) {
+                var isMobileMenuIcon = event.target.classList.contains('mobile-menu-icon');
+                var isMobileMenuLink = event.target.closest('.mobile-menu a');
+
+                if (isMobileMenuIcon || isMobileMenuLink) {
+                    // Toggle the visibility of the mobile menu
+                    mobileMenu.classList.toggle('show-mobile-menu');
+                } else {
+                    // Hide the mobile menu if clicking outside the menu icon and links
+                    mobileMenu.classList.remove('show-mobile-menu');
+                }
+            });
+        });
+
+        function gotosyllabus() {
+            window.location.href = "syllabus.html"
+        }
+        function gototimetable() {
+            window.location.href = "timetable.html"
+        }
+        function gotoNPTEL() {
+            window.location.href = "NPTEL.html"
+        }
+        function gotoimpoDates() {
+            window.location.href = "impoDates.html"
+        }
+        function gotoNotes() {
+            window.location.href = "https://drive.google.com/drive/folders/17UMYZBfaqzvy4y58MoKApaFrIQJmaZQX?usp=drive_link"
+        }
+        function gotoQuestions() {
+            window.location.href = "https://drive.google.com/drive/folders/1Ixi-VrT0x_o57l3nhovfFHr5CR_lFGFf?usp=drive_link"
+        }
+        function gotoMcaweb() {
+            window.location.href = "https://www.msrit.edu/department/mca.html"
+        }
+        function gotoSIS() {
+            window.location.href = "https://parents.msrit.edu/parentseven/"
+        }
+        function gotores() {
+            window.location.href = "https://exam.msrit.edu/"
+        }
+
+
+    </script>
+</body>
+
+</html>

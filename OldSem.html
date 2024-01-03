@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NPTEL Courses</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        .sem {
+            text-align: center;
+        }
+        .subject-list {
+            list-style-type: none;
+            padding: 0;
+            align-items: center;
+        }
+        .subject-item {
+            margin-bottom: 10px;
+        }
+        .subject-link {
+            text-decoration: none;
+            display: inline-block;
+            width: 90%;
+            padding: 10px;
+            background-color: #04067f;
+            color: #fff;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1><a href="https://nptel.ac.in/courses">NPTEL Courses (Main Website)</a></h1>
+    <h2 class="sem sem1">Sem 1</h2>
+    <ul class="subject-list">
+        <li class="subject-item">
+            <button onclick="openLink('https://nptel.ac.in/courses/106106183')" class="subject-link">Descrete Mathematics</button>
+        </li>
+        <li class="subject-item">
+            <button onclick="openLink('https://nptel.ac.in/courses/106106182')" class="subject-link">Programming With Python</button>
+        </li>
+        <li class="subject-item">
+            <button onclick="openLink('https://nptel.ac.in/courses/106106092')" class="subject-link">Computer Organization</button>
+        </li>
+        <li class="subject-item">
+            <button onclick="openLink('https://nptel.ac.in/courses/106105214')" class="subject-link">Operating System</button>
+        </li>
+        <li class="subject-item">
+            <button onclick="openLink('https://nptel.ac.in/courses/106102064')" class="subject-link">Data Structure and Algorithms</button>
+        </li>
+        <li class="subject-item">
+            <button onclick="openLink('https://nptel.ac.in/courses/106106222')" class="subject-link">Modern Application Development</button>
+        </li>
+    </ul>
+    <h2 class="sem sem2">Sem 2</h2>
+    <ul class="subject-list">
+        <li class="subject-item">
+            <button onclick="openLink('https://nptel.ac.in/courses/106105191')" class="subject-link">Programming In Java</button>
+        </li>
+        <li class="subject-item">
+            <button onclick="openLink('https://nptel.ac.in/courses/106106131')" class="subject-link">Design and Analysis of Algorithms</button>
+        </li>
+        <li class="subject-item">
+            <button onclick="openLink('https://nptel.ac.in/courses/106106220')" class="subject-link">Database Systems</button>
+        </li>
+        <li class="subject-item">
+            <button onclick="openLink('https://nptel.ac.in/courses/106105183')" class="subject-link">Computer Networks</button>
+        </li>
+        <li class="subject-item">
+            <button onclick="openLink('https://nptel.ac.in/courses/106106138')" class="subject-link">Virtual Reality</button>
+        </li>
+        <li class="subject-item">
+            <button onclick="openLink('https://nptel.ac.in/courses/106105166')" class="subject-link">Introduction to Internet of Things</button>
+        </li>
+    </ul>
+    <script>
+        function openLink(link) {
+            window.open(link, '_blank');
+        }
+    </script>
+</body>
+</html>

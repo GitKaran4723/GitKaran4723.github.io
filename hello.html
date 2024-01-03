@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom HTML Element</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Define a new custom element 'my-section'
+            customElements.define('my-section', class extends HTMLElement {
+                constructor() {
+                    super();
+                    // Create a shadow DOM to encapsulate styles
+                    this.attachShadow({mode: 'open'});
+                    // Define the structure of the custom element
+                    this.shadowRoot.innerHTML = `
+                        <div style="border: 1px solid #ccc; padding: 10px;">
+                            <h2>This is a custom section</h2>
+                            <p>Some content goes here...</p>
+                        </div>
+                    `;
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+
+    <!-- Use the custom element 'my-section' -->
+    <my-section></my-section>
+
+    <p>Regular content continues here...</p>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLI-like Page</title>
+    <style>
+        body {
+            background-color: #2d2d2d;
+            color: #dcdcdc;
+            font-family: 'Courier New', monospace;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .prompt {
+            color: #00ff00;
+            font-weight: bold;
+        }
+
+        .output {
+            color: #BFA77F;
+        }
+    </style>
+</head>
+<body>
+    <pre>
+        <span class="output"></span>
+
+        <!-- Content will be dynamically loaded here -->
+
+    </pre>
+
+    <script>
+        // Use fetch to load data from the bigdata.txt file
+        fetch('new.txt')
+            .then(response => response.text())
+            .then(data => {
+                // Display the loaded content in the output area
+                const outputArea = document.querySelector('.output');
+                outputArea.textContent = data;
+            })
+            .catch(error => {
+                console.error('Error loading data:', error);
+            });
+    </script>
+</body>
+</html>

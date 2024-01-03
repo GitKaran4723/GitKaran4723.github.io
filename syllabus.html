@@ -1,0 +1,835 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            
+            width: 100vw;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        /* CSS for the 'Go to Top' button */
+        #goToTop {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 99;
+            font-size: 16px;
+            border: none;
+            outline: none;
+            background-color: #333;
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            border-radius: 50%;
+        }
+
+        .sub {
+            margin: 5px;
+            background: #808000;
+            color: white;
+            font-weight: bold;
+            width: 80%;
+            border-radius: 10px;
+            padding: 1vw;
+            margin: 5px;
+            cursor: pointer;
+            border: none;
+            background-color: #2928b9;
+            color: white;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        @media  (max-width:768px){
+            .sub{
+                padding: 3vw
+            }
+            
+        }
+
+        .sub:hover {
+            background-color: #2980b9;
+        }
+        
+
+        .icon{
+            background-color: rgb(247, 247, 38);
+            padding: 5px;
+            
+        }
+        .icon:hover{
+            width: 2vw;
+            cursor: pointer;
+        }
+        li{
+            margin-bottom: 10px;
+        }
+        .hide{
+            display:none;
+        }
+    </style>
+    
+</head>
+
+
+<body>
+    <button id="goToTop" onclick="goToTopFunction()">Go to Top</button>
+    <div class="main_subject">
+        <h2>Subjects</h2>
+        <p>Click on Subject to read subtopics</p>
+        <ol>
+            <li><button class="sub" onclick="smoothScrollTo('SE')">Software Engineering</button></li>
+            <li><button class="sub" onclick="smoothScrollTo('AIML')">Machine Learning</button></li>
+            <li><button class="sub" onclick="smoothScrollTo('IS')">Information Security</button></li>
+            <li><button class="sub" onclick="smoothScrollTo('cloud')">Cloud Computing</button></li>
+            <li><button class="sub" onclick="smoothScrollTo('bigdata')">Big Data Analytics</button></li>
+            <li><button class="sub" onclick="smoothScrollTo('MAD')">Mobile Application Development</button></li>
+            <li><button class="sub" onclick="smoothScrollTo('DT')">Design Thinking</button></li>
+        </ol>
+    </div>
+
+    <hr />
+
+
+    <div class="SE">
+
+        <h2 id="SE">Software Engineering and Agile Methodologies<span class="idea icon hide" onclick="goto()">&#128161</span> 
+            <span class="notes icon hide" onclick="goto()">&#128221</span></h2>
+        <ul>
+            <li>Unit 1
+                <ul>
+                    <li>Socio-technical Systems:<span class="idea icon hide" onclick="goto()">&#128161</span> 
+                        <span class="notes icon hide" onclick="goto()">&#128221</span>
+                        <ul>
+                            <li>Complex systems<span class="idea icon hide" onclick="goto()">&#128161</span> 
+                                <span class="notes icon hide" onclick="goto()">&#128221</span></li>
+                            <li>System engineering<span class="idea icon hide" onclick="goto()">&#128161</span> 
+                                <span class="notes icon hide" onclick="goto()">&#128221</span></li>
+                            <li>System procurement<span class="idea icon hide" onclick="goto()">&#128161</span> 
+                                <span class="notes icon hide" onclick="goto()">&#128221</span></li>
+                            <li>System development<span class="idea icon hide" onclick="goto()">&#128161</span> 
+                                <span class="notes icon hide" onclick="goto()">&#128221</span></li>
+                            <li>System operation<span class="idea icon hide" onclick="goto()">&#128161</span> 
+                                <span class="notes icon hide" onclick="goto()">&#128221</span></li>
+                        </ul>
+                    </li>
+                    <li>Dependability and Security:
+                        <ul>
+                            <li>Dependability properties<span class="idea icon hide" onclick="goto()">&#128161</span> 
+                                <span class="notes icon hide" onclick="goto()">&#128221</span></li>
+                            <li>Availability and reliability<span class="idea icon hide" onclick="goto()">&#128161</span> 
+                                <span class="notes icon hide" onclick="goto()">&#128221</span></li>
+                            <li>Safety<span class="idea icon hide" onclick="goto()">&#128161</span> 
+                                <span class="notes icon hide" onclick="goto()">&#128221</span></li>
+                            <li>Security<span class="idea icon hide" onclick="goto()">&#128161</span> 
+                                <span class="notes icon hide" onclick="goto()">&#128221</span></li>
+                        </ul>
+                    </li>
+                    <li>Requirements Engineering:<span class="idea icon hide" onclick="goto()">&#128161</span> 
+                        <span class="notes icon hide" onclick="goto()">&#128221</span>
+                        <ul>
+                            <li>Functional and Non-functional requirements<span class="idea icon hide" onclick="goto()">&#128161</span> 
+                                <span class="notes icon hide" onclick="goto()">&#128221</span></li>
+                            <li>The software requirements document<span class="idea icon hide" onclick="goto()">&#128161</span> 
+                                <span class="notes icon hide" onclick="goto()">&#128221</span></li>
+                            <li>Requirements specification<span class="idea icon hide" onclick="goto()">&#128161</span> 
+                                <span class="notes icon hide" onclick="goto()">&#128221</span></li>
+                            <li>Requirements engineering processes<span class="idea icon hide" onclick="goto()">&#128161</span> 
+                                <span class="notes icon hide" onclick="goto()">&#128221</span></li>
+                            <li>Requirements elicitation and analysis<span class="idea icon hide" onclick="goto()">&#128161</span> 
+                                <span class="notes icon hide" onclick="goto()">&#128221</span></li>
+                            <li>Requirements validation<span class="idea icon hide" onclick="goto()">&#128161</span> 
+                                <span class="notes icon hide" onclick="goto()">&#128221</span></li>
+                            <li>Requirements management<span class="idea icon hide" onclick="goto()">&#128161</span> 
+                                <span class="notes icon hide" onclick="goto()">&#128221</span></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>Unit 2
+                <ul>
+                    <li>System Modelling:<span class="idea icon hide" onclick="goto()">&#128161</span> 
+                        <span class="notes icon hide" onclick="goto()">&#128221</span>
+                        <ul>
+                            <li>Context models<span class="idea icon hide" onclick="goto()">&#128161</span> 
+                                <span class="notes icon hide" onclick="goto()">&#128221</span></li>
+                            <li>Interaction Models<span class="idea icon hide" onclick="goto()">&#128161</span> 
+                                <span class="notes icon hide" onclick="goto()">&#128221</span></li>
+                            <li>Structural Models<span class="idea icon hide" onclick="goto()">&#128161</span> 
+                                <span class="notes icon hide" onclick="goto()">&#128221</span></li>
+                            <li>Behavioral models<span class="idea icon hide" onclick="goto()">&#128161</span> 
+                                <span class="notes icon hide" onclick="goto()">&#128221</span></li>
+                            <li>Model-driven engineering<span class="idea icon hide" onclick="goto()">&#128161</span> 
+                                <span class="notes icon hide" onclick="goto()">&#128221</span></li>
+                        </ul>
+                    </li>
+                    <li>Software Design and Development, Architectural Design:<span class="idea icon hide" onclick="goto()">&#128161</span> 
+                        <span class="notes icon hide" onclick="goto()">&#128221</span>
+                        <ul>
+                            <li>Architectural design decisions<span class="idea icon hide" onclick="goto()">&#128161</span> 
+                                <span class="notes icon hide" onclick="goto()">&#128221</span></li>
+                            <li>Architectural views<span class="idea icon hide" onclick="goto()">&#128161</span> 
+                                <span class="notes icon hide" onclick="goto()">&#128221</span></li>
+                            <li>Architectural patterns<span class="idea icon hide" onclick="goto()">&#128161</span> 
+                                <span class="notes icon hide" onclick="goto()">&#128221</span></li>
+                            <li>Application architectures<span class="idea icon hide" onclick="goto()">&#128161</span> 
+                                <span class="notes icon hide" onclick="goto()">&#128221</span></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>Unit 3
+                <ul>
+                    <li>Agile Methodologies-Introduction:
+                        <ul>
+                            <li>What is Agile?</li>                         
+                            <li>The history of Agile</li>
+                            <li>The Agile Manifesto</li>
+                            <li>Agile Principles</li>
+                        </ul>
+                    </li>
+                    <li>Why Agile?:
+                        <ul>
+                            <li>Understanding Success</li>
+                            <li>Beyond Deadlines</li>
+                            <li>The Importance of Organizational Success</li>
+                            <li>Enter Agility</li>
+                        </ul>
+                    </li>
+                    <li>How to Be Agile:
+                        <ul>
+                            <li>Agile Methods</li>
+                            <li>Don’t Make your own Method</li>
+                            <li>The Road to Mastery</li>
+                            <li>Find a Mentor</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>Unit 4
+                <ul>
+                    <li>Overview of Extreme Programming (XP):
+                        <ul>
+                            <li>XP Concepts</li>
+                        </ul>
+                    </li>
+                    <li>Agile Design:
+                        <ul>
+                            <li>Symptoms of Poor Design</li>
+                            <li>Principles</li>
+                            <li>Smells and Principles</li>
+                            <li>What is Agile Design?</li>
+                            <li>What Goes Wrong with Software?</li>
+                            <li>How did the Agile Developers Know What to Do?</li>
+                            <li>Keeping the Design as Good as It Can Be</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>Unit 5
+                <ul>
+                    <li>Agile Frameworks:
+                        <ul>
+                            <li>Dynamic system development method (DSDM)</li>
+                            <li>Agile Project Management</li>
+                            <li>Kanban</li>
+                            <li>Lean Software Development</li>
+                            <li>Lean Start-up</li>
+                            <li>Scaled Agile Framework (SAFe)</li>
+                        </ul>
+                    </li>
+                    <li>Agile Development - Planning:
+                        <ul>
+                            <li>Initial Exploration</li>
+                            <li>Release Planning</li>
+                            <li>Iteration Planning</li>
+                            <li>Task Planning</li>
+                            <li>Iterating</li>
+                        </ul>
+                    </li>
+                    <li>Testing:
+                        <ul>
+                            <li>Test Driven Development (TDD)</li>
+                            <li>Acceptance tests</li>
+                            <li>Exploratory testing</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h3>Text Books:</h3>
+        <ol>
+            <li><b>Ian Sommerville: Software Engineering</b>, 9th Edition, Pearson Education Publications, 2013.</li>
+            <li><b>Robert C. Martin with contributions by James W. Newkirk and Robert S. Koss: Agile Software
+                    Development: Principles, Patterns, and Practices</b>, Pearson Education.</li>
+            <li><b>Peter Measey and Radtac: Agile Foundations: Principles, Practices and frameworks</b>, Viva Books
+                Private Limited.</li>
+        </ol>
+
+        <h3>Reference Books:</h3>
+        <ol>
+            <li><b>Roger. S. Pressman: Software Engineering-A Practitioners Approach,</b> 7th Edition, McGrawHill, 2010
+            </li>
+            <li><b>Shari Lawrence Pfleeger, Joanne M. Atlee: Software Engineering Theory and Practice,</b> 4th Edition,
+                Pearson Education, 2009</li>
+            <li><b>Ali Behforooz, Frederick J. Hudson: Software Engineering Fundamentals</b>, 1st Indian Edition, Oxford
+                University Press, 2006.</li>
+        </ol>
+
+        <a href="" class="hide">Link To Question Papers</a>
+    </div>
+
+    <hr />
+
+    <div class="AIML">
+
+        <h2 id="AIML">Machine Learning</h2>
+        <ul>
+            <li><strong>UNIT I: Machine Learning Basics</strong>
+                <ul>
+                    <li>Well posed learning problems</li>
+                    <li>Designing a learning system</li>
+                    <li>Perspectives and issues in Machine Learning</li>
+                </ul>
+            </li>
+    
+            <li><strong>UNIT II: Regression</strong>
+                <ul>
+                    <li>Simple Linear Regression</li>
+                    <li>Multiple Linear Regression</li>
+                    <li>Logistic Regression</li>
+                    <li>Main Problems in Regression Analysis</li>
+                </ul>
+            </li>
+    
+            <li><strong>UNIT III: Classification</strong>
+                <ul>
+                    <li>Decision Tree Learning</li>
+                    <ul>
+                        <li>Decision Tree representation</li>
+                        <li>Appropriate problems for decision tree learning</li>
+                        <li>Basic decision tree learning algorithm</li>
+                    </ul>
+                </ul>
+            </li>
+    
+            <li><strong>UNIT IV: Classification (contd)</strong>
+                <ul>
+                    <li>Classification Learning Steps</li>
+                    <li>Support Vector Machines</li>
+                </ul>
+            </li>
+    
+            <li><strong>UNIT V: Bayesian Learning and Clustering</strong>
+                <ul>
+                    <li>Bayesian Learning</li>
+                    <ul>
+                        <li>Bayes theorem and concept learning</li>
+                        <li>Naïve Bayes Classifier</li>
+                    </ul>
+                    <li>Clustering as a machine learning task</li>
+                    <li>Partitioning methods</li>
+                    <li>Artificial Neural Networks</li>
+                    <ul>
+                        <li>Introduction</li>
+                        <li>Neural Network representation</li>
+                        <li>Perceptron</li>
+                    </ul>
+                </ul>
+            </li>
+            <li>Laboratory
+                <ul>
+                    <li>Implementation of techniques for AI and ML using Python</li>
+                </ul>
+            </li>
+        </ul>
+        <h2>Text Book:</h2>
+        <ol>
+            <li>Tom M. Mitchell, Machine Learning, India Edition 2013, McGraw Hill Education </li>
+            <li>Saikat Dutt, Subramanian Chandramouli, Amit Kumar Das: Machine Learning, 2019.</li>
+            
+        </ol>
+
+        <h2>Reference Books:</h2>
+        <ol>
+            <li>Trevor Hastie, Robert Tibshirani, Jerome Friedman, The Elements of Statistical Learning, 2nd Edition, Springer series in statistics.</li>
+            <li>2.Ethem Alpaydin, Introduction to Machine learning, 2nd Edition, MIT Press</li>
+        </ol>
+
+        <a href="" class="hide">Link To Question Papers</a>
+    </div>
+
+    <hr />
+
+    <div class="IS">
+        <h2 id="IS">Information Security Curriculum</h2>
+        <ul>
+            <li>Unit 1
+                <ul>
+                    <li>Introduction to Information Security:
+                        <ul>
+                            <li>What Is Security?</li>
+                            <li>Components of an Information System</li>
+                            <li>Balancing Information Security and Access</li>
+                            <li>Approaches to Information Security Implementation</li>
+                            <li>The Security Systems Development Life Cycle</li>
+                            <li>The Need for Security: Threats, Attacks</li>
+                            <li>Legal, Ethical, and Professional Issues in Information Security:
+                                <ul>
+                                    <li>Ethics and Information Security</li>
+                                    <li>Codes of Ethics and Professional Organizations</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>Unit 2
+                <ul>
+                    <li>Risk Management:
+                        <ul>
+                            <li>Risk Identification</li>
+                            <li>Risk Assessment</li>
+                            <li>Risk Control Strategies</li>
+                            <li>Selecting a Risk Control Strategy</li>
+                            <li>Quantitative Versus Qualitative Risk Control Practices</li>
+                        </ul>
+                    </li>
+                    <li>Security Technology:
+                        <ul>
+                            <li>Firewalls and VPNs</li>
+                            <li>Access Control</li>
+                            <li>Protecting Remote Connections</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>Unit 3
+                <ul>
+                    <li>Security Technology:
+                        <ul>
+                            <li>Intrusion Detection and Prevention Systems, and Other Security Tools</li>
+                            <li>Intrusion Detection and Prevention Systems</li>
+                            <li>Honeypots, Honeynets, and Padded Cell Systems</li>
+                            <li>Scanning and Analysis Tools</li>
+                            <li>Biometric Access Controls Implementing Information Security</li>
+                            <li>Information Security Project Management</li>
+                            <li>Technical Aspects of Implementation</li>
+                            <li>Nontechnical Aspects of Implementation</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>Unit 4
+                <ul>
+                    <li>Symmetric Ciphers:
+                        <ul>
+                            <li>Symmetric Cipher Model</li>
+                            <li>Substitution Techniques</li>
+                            <li>Transposition Techniques</li>
+                            <li>Rotor Machines</li>
+                            <li>Steganography</li>
+                            <li>Block Ciphers and the Data Encryption Standard:
+                                <ul>
+                                    <li>Block Cipher Principles</li>
+                                    <li>The Data Encryption Standard</li>
+                                    <li>The Strength of DES</li>
+                                    <li>Advanced Encryption Standard</li>
+                                    <li>Evaluation Criteria For AES</li>
+                                    <li>The AES Cipher</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>Unit 5
+                <ul>
+                    <li>Public-Key Encryption and Hash Functions:
+                        <ul>
+                            <li>Public-Key Cryptography and RSA</li>
+                            <li>Principles of Public-Key Cryptosystems The RSA Algorithm</li>
+                            <li>Key Management; Other Public-Key Cryptosystems</li>
+                            <li>Key Management</li>
+                            <li>Diffie-Hellman Key Exchange</li>
+                            <li>Message Authentication and Hash Functions</li>
+                            <li>Authentication Requirements</li>
+                            <li>Authentication Functions</li>
+                            <li>Message Authentication Codes</li>
+                            <li>Hash Functions</li>
+                            <li>Security of Hash Functions and MACs</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>Text books</h3>
+        <ol>
+            <li>Michael E. Whitman, Herbert J. Mattord: Principles of Information Security, 4th Edition, 
+                Cengage Learning, 2012.(Selected Portion from Chapters 1,2,3,4,5,6,7,9,10).
+                </li>
+            <li>William Stallings: Cryptography and Network Security-Principles and Practices, 4th Edition, 
+                Prentice Hall.
+                Chapters: 2.1 to 2.5, 3.1 to 3.3, 3.5, 5.1 to 5.2, 9.1 to 9.2, 10.1 to 10.2, 11.1 to 11.5.</li>
+        </ol>
+
+        <h3>Reference books</h3>
+        <ol>
+            <li>Behrouz A Forouzan: Cryptography and Network Security, 3rd Edition, Tata McGraw Hill, 
+                2015.</li>
+            <li>R. Kelly Rainer, Casey G. Cegielski: Introduction to Information Systems, 4th Edition, 
+                Wiley India, 2015.
+                </li>
+            <li>Mark Merkow, James Breithaupt: Information Security: Principles and Practices, Pearson 
+                Education, 2014.</li>
+        </ol>
+
+        <a href="" class="hide">Link To Question Papers</a>
+
+    </div>
+
+    <hr />
+
+    <div>
+        <h2 id="cloud">Cloud computing</h2>
+        <h3>Concepts to be covered in Tutorial: Cloud Computing</h3>
+        <ol>
+            <li>Introduction to Cloud Computing</li>
+            <li>Familiarity of different services provided by AWS</li>
+            <li>Setting of Private Cloud in AWS</li>
+            <li>Working with Amazon EC2, and S3 services</li>
+            <li>Working with AMI</li>
+            <li>Back up and Launch a new instance using Back-up</li>
+            <li>Elastic IPs and AWS Identity and Access Management (IAM)</li>
+            <li>Hosting Static Website and Hosting Applications in AWS</li>
+            <li>Working with AWS RDS: MySQL Workbench and Dynamo DB</li>
+            <li>Resource management in cloud: Load Balancer and Auto Scaling Group</li>
+            <li>AWS-Eclipse Integration with Elastic Beanstalk</li>
+            <li>Connect RDS and Java Applications</li>
+            <li>Data Analytics, Security</li>
+        </ol>
+
+        <h3>Laboratory Tasks</h3>
+        <ul>
+            <li>Familiarize the services by AWS</li>
+            <li>Creating user login</li>
+            <li>Creating Linux, Windows virtual machines instance using EC2</li>
+            <li>Run simple applications on EC2 Instance</li>
+            <li>Creating Storage using S3</li>
+            <li>Create a Backup using Image and launch new instance using Backup image</li>
+            <li>Creating an RDS Instance with MySQL Workbench and Dynamo DB</li>
+            <li>Demonstrate Database application on AWS</li>
+            <li>Upgrading and downgrading the infrastructure based on the requirement</li>
+            <li>Demonstrate Load balancing using different instances of EC2</li>
+            <li>Launch a web application</li>
+            <li>Demonstrate Identity and Access management</li>
+            <li>Demonstrate Elastic Beanstalk</li>
+            <li>Demonstrate AWS dynamic web application</li>
+            <li>Demonstrate Data Analytics using Elastic Map Reduce (EMR)</li>
+        </ul>
+
+        <h3>Text books</h3>
+        <ol>
+            <li>Michael E. Whitman, Herbert J. Mattord: Principles of Information Security, 4th Edition,
+                Cengage Learning, 2012.(Selected Portion from Chapters 1,2,3,4,5,6,7,9,10)</li>
+            <li>William Stallings: Cryptography and Network Security-Principles and Practices, 4th Edition,
+                Prentice Hall.
+                Chapters: 2.1 to 2.5, 3.1 to 3.3, 3.5, 5.1 to 5.2, 9.1 to 9.2, 10.1 to 10.2, 11.1 to 11.5</li>
+        </ol>
+
+        <h3>Reference books</h3>
+        <ol>
+            <li>Behrouz A Forouzan: Cryptography and Network Security, 3rd Edition, Tata McGraw Hill,
+                2015.</li>
+            <li>R. Kelly Rainer, Casey G. Cegielski: Introduction to Information Systems, 4th Edition,
+                Wiley India, 2015.</li>
+            <li>Mark Merkow, James Breithaupt: Information Security: Principles and Practices, Pearson
+                Education, 2014.</li>
+        </ol>
+
+        <a href="" class="hide">Link To Question Papers</a>
+
+    </div>
+
+    <hr />
+
+    <div class="bigdata">
+        <h2 id="bigdata">Big data analytics</h2>
+        <h3>Topics to be Covered in Tutorial</h3>
+        <ul>
+            <li>Big Data Fundamentals <span class="idea icon" onclick="goto('https://studymcawithme.blogspot.com/2023/12/big-data-fundamentals.html')">&#128161</span> 
+                <span class="notes icon hide" onclick="goto()">&#128221</span> </li>
+            <li>Hadoop Distributed File System and Hadoop Architecture<span class="idea icon" onclick="goto('https://studymcawithme.blogspot.com/2023/12/hadoop-distributed-file-system-and.html')">&#128161</span> 
+                <span class="notes icon hide" onclick="goto()">&#128221</span> </li>
+            <li>Moving the Data into Hadoop and Moving the Data out from Hadoop<span class="idea icon " onclick="goto('https://studymcawithme.blogspot.com/2023/12/moving-data-into-hadoop-and-moving-data.html')">&#128161</span> 
+                <span class="notes icon hide" onclick="goto()">&#128221</span> </li>
+            <li>MapReduce and HDFS<span class="idea icon" onclick="goto('https://studymcawithme.blogspot.com/2023/12/mapreduce-and-hadoop-distributed-file.html')">&#128161</span> 
+                <span class="notes icon hide" onclick="goto()">&#128221</span> </li>
+            <li>Reading and Writing the files in HDFS <span class="idea icon hide" onclick="goto()">&#128161</span> 
+                <span class="notes icon hide" onclick="goto()">&#128221</span> </li>
+            <li>Hive Overview and Working with Hive</li>
+            <li>Pig Overview and Working with Pig</li>
+            <li>Flume Overview and Moving the Data from Web Server into Hadoop</li>
+            <li>Introduction to Apache Spark:
+                <ul>
+                    <li>Features of Apache Spark</li>
+                    <li>Apache Spark Architecture</li>
+                    <li>Spark Applications</li>
+                </ul>
+            </li>
+            <li>Apache Spark Components, Different Data Sources, and Formats in Spark</li>
+            <li>Resilient Distributed Dataset (RDD):
+                <ul>
+                    <li>Introduction of RDD</li>
+                    <li>Features of RDD in Spark</li>
+                    <li>RDD operations</li>
+                </ul>
+            </li>
+            <li>Spark RDD Operations:
+                <ul>
+                    <li>RDD Transformation</li>
+                    <li>RDD Action</li>
+                </ul>
+            </li>
+            <li>Building and Deploying Spark Application</li>
+        </ul>
+
+        <h3>Laboratory</h3>
+        <ul>
+            <li>Programs supplement the tutorial concepts will be based on the latest version of Apache Hadoop and
+                Ecosystems</li>
+        </ul>
+
+
+        <h3>Reference books</h3>
+        <ol>
+            <li>Tom White: Hadoop The Definitive Guide, Fourth Edition, 4th edition, O’Reilly Media,
+                2015. </li>
+            <li>Edward Capriolo, Dean Wampler, and Jason Rutherglen: Programming Hive, 1st edition,
+                O’Reilly Media, 2012. </li>
+            <li>Alan Gates: Jason Ostrander: Programming Pig, 1st edition, O’Reilly Media, 2011</li>
+            <li>Lars George: HBase The Definitive Guide, 1st edition, O’Reilly Media, 2011
+            </li>
+        </ol>
+
+        <a href="" class="hide">Link To Question Papers</a>
+
+    </div>
+
+    <hr />
+
+    <div class="MAD">
+        <h2 id="MAD">Mobile Application Development</h2>
+        <h2>
+        </h2>
+        <h3>Topics to be Covered in Android Tutorial</h3>
+        <ul>
+            <li>Introduction to Android, features, Android Architecture<span class="idea icon" onclick="goto('https://studymcawithme.blogspot.com/2023/12/introduction-to-android-features.html')">&#128161</span> 
+                <span class="notes icon hide" onclick="goto()">&#128221</span> </li>
+            <li>Exploring Linear Layout and Relative Layout<span class="idea icon" onclick="goto('https://studymcawithme.blogspot.com/2023/12/exploring-linear-layout-and-relative.html')">&#128161</span> 
+                <span class="notes icon hide" onclick="goto()">&#128221</span> </li>
+            <li>Exploring Widgets<span class="idea icon" onclick="goto('https://studymcawithme.blogspot.com/2023/12/exploring-widgets.html')">&#128161</span> 
+                <span class="notes icon hide" onclick="goto()">&#128221</span> </li>
+            <li>Android Activity Life Cycle<span class="idea icon hide" onclick="goto()">&#128161</span> 
+                <span class="notes icon hide" onclick="goto()">&#128221</span></li>
+            <li>Intents in Android, Shared Preferences</li>
+            <li>Fragments in Android</li>
+            <li>Animations</li>
+            <li>Databases and Content Providers</li>
+            <li>Services</li>
+            <li>Sensors and Location-based Services</li>
+            <li>Audio Playback and Image Capture</li>
+            <li>Introduction to Frameworks (Cordova, Phonegap)</li>
+        </ul>
+
+        <h3>Laboratory</h3>
+        <ul>
+            <li>Programs supplementing the tutorial concepts will be based on the latest version of Android.</li>
+            <li>Mini Project</li>
+        </ul>
+
+        <h3>Reference books</h3>
+    <ol>
+        <li>Reto Meier: Professional Android 4 Application Development. Wiley India Edition, 2012.</li>
+        <li>Jerome (J.F.) Di Marzio: Android A Programmer’s Guide, Tata McGraw-Hill, 2010. </li>
+        <li>B.M. Harwani: Android Programming, Pearson, 2013. </li>
+        <li>Jason Ostrander: Android UI Fundamentals Develop and Design, Pearson, 2014. </li>
+        <li>John Horton: Android Programming for Beginners, Packt publishing, 2015.</li>
+        <li>Nanjesh Bennur, Deepesh R, Dr. Niranjanamurthy M: Fundamentals of Mobile Application
+            Development First Edition, InSc Publishing house, 2019.
+        </li>
+        <li>Web Reference: Any Google developer sites</li>
+    </ol>
+    </div>
+
+    
+
+    <a href=""  class="hide">Link To Question Papers</a>
+
+    <hr />
+
+    <div class="DT">
+
+        <h2 id="DT">Design Thinking</h2>
+        <ul>
+            <li>Unit 1
+                <ul>
+                    <li>WHAT'S DESIGN THINKING?<span class="idea icon hide" onclick="goto()">&#128161</span> 
+                        <span class="notes icon hide" onclick="goto()">&#128221</span> </li>
+                    <li>Why do we need design thinking?<span class="idea icon hide" onclick="goto()">&#128161</span> 
+                        <span class="notes icon hide" onclick="goto()">&#128221</span> </li>
+                    <li>What makes design thinking unique?<span class="idea icon hide" onclick="goto()">&#128161</span> 
+                        <span class="notes icon hide" onclick="goto()">&#128221</span> </li>
+                    <li>DESIGN ACTION PLAN:<span class="idea icon hide" onclick="goto()">&#128161</span> 
+                        <span class="notes icon hide" onclick="goto()">&#128221</span> 
+                        <ul>
+                            <li>5 characteristics of action plan<span class="idea icon hide" onclick="goto()">&#128161</span> 
+                                <span class="notes icon hide" onclick="goto()">&#128221</span> </li>
+                            <li>Empathize phase<span class="idea icon hide" onclick="goto()">&#128161</span> 
+                                <span class="notes icon hide" onclick="goto()">&#128221</span> </li>
+                            <li>Define phase<span class="idea icon hide" onclick="goto()">&#128161</span> 
+                                <span class="notes icon hide" onclick="goto()">&#128221</span> </li>
+                            <li>Ideate phase<span class="idea icon hide" onclick="goto()">&#128161</span> 
+                                <span class="notes icon hide" onclick="goto()">&#128221</span> </li>
+                            <li>Prototype phase<span class="idea icon hide" onclick="goto()">&#128161</span> 
+                                <span class="notes icon hide" onclick="goto()">&#128221</span> </li>
+                            <li>Test phase<span class="idea icon hide" onclick="goto()">&#128161</span> 
+                                <span class="notes icon hide" onclick="goto()">&#128221</span> </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>Unit 2
+                <ul>
+                    <li>Process of Design</li>
+                    <li>Introduction-Product Life Cycle</li>
+                    <li>Design Ethics</li>
+                    <li>Design Process
+                        <ul>
+                            <li>Four Step</li>
+                            <li>Five Step</li>
+                            <li>Twelve Step</li>
+                            <li>Creativity and Innovation in Design Process</li>
+                            <li>Design limitation</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>Unit 3
+                <ul>
+                    <li>THINKING MINDSETS- Anatomy of a design thinker</li>
+                    <li>Mindset 1: Think users first</li>
+                    <li>Mindset 2: Ask the right questions</li>
+                    <li>Mindset 3: Believe you can draw</li>
+                    <li>Mindset 4: Commit to ideate</li>
+                    <li>Mindset 5: Prototype to test</li>
+                    <li>THINK USERS FIRST:
+                        <ul>
+                            <li>What are your users' inherent needs?</li>
+                            <li>How do you empathize with your users?</li>
+                            <li>Ask questions—What you need to know</li>
+                            <li>Steps to take for preparing an interview</li>
+                            <li>Persona</li>
+                            <li>Empathy map</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>Unit 4
+                <ul>
+                    <li>ASK THE RIGHT QUESTIONS:</li>
+                    <li>Why ask the right questions?</li>
+                    <li>What are different types of questions?</li>
+                    <li>Who should you ask questions?</li>
+                    <li>How to align stakeholders in meetings?</li>
+                    <li>Why should we communicate by drawing?</li>
+                    <li>What is the value of drawing?</li>
+                    <li>How to start drawing?</li>
+                </ul>
+            </li>
+            <li>Unit 5
+                <ul>
+                    <li>COMMIT TO IDEATE:</li>
+                    <li>Why do you need to ideate?</li>
+                    <li>What are the rules of ideation?</li>
+                    <li>How to facilitate an ideation session?</li>
+                    <li>How to build a creative culture?</li>
+                    <li>Divergent- common ideation techniques</li>
+                    <li>Convergent—simple ways to converge</li>
+                    <li>PROTOTYPE TO TEST:</li>
+                    <li>What you could use as a prototype?</li>
+                    <li>Why do we need a prototype?</li>
+                    <li>Why do we test?</li>
+                    <li>How to conduct a structured test?</li>
+                    <li>How to conduct the interview?</li>
+                    <li>How to conduct the observers' debrief?</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>Reference books</h3>
+        <ol>
+            <li>Daniel Ling: Complete Design Thinking Guide for Successful Professionals, Emerge
+                Creatives Group LLP, 2015.</li>
+            <li>Nigel Cross, Design Thinking: Understanding How Designers Think and Work,
+                Bloomsbury Academic, 2016.</li>
+            <li>John R. Karsnitz, Stephen O'Brien, John P. Hutchinson: Engineering Design: An
+                Introduction, Cengage Learning, 2nd Edition.</li>
+            <li>Yousef Haik, Sangarappillai Sivaloganathan, Tamer M. Shahin: Engineering Design
+                Process, Cengage Learning, 2018.</li>
+        </ol>
+
+        <a href="" class="hide">Link To Question Papers</a>
+
+    </div>
+
+</body>
+
+<script>
+    // JavaScript function to scroll to the top of the page with smooth transition
+    function goToTopFunction() {
+        if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth' // Smooth scrolling effect
+            });
+        }
+    }
+
+    // Show/hide the 'Go to Top' button based on scroll position
+    window.onscroll = function () {
+        scrollFunction();
+    };
+
+    function scrollFunction() {
+        var goToTopButton = document.getElementById("goToTop");
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            goToTopButton.style.display = "block";
+        } else {
+            goToTopButton.style.display = "none";
+        }
+    }
+
+    function smoothScrollTo(sectionId) {
+        const section = document.getElementById(sectionId);
+        if (section) {
+            section.scrollIntoView({
+                behavior: "smooth"
+            });
+        }
+    }
+
+    function goto(url){
+        window.location.href=url
+    }
+</script>
+<!-- 
+    <span class="idea icon hide" onclick="goto()">&#128161</span> 
+    <span class="notes icon hide" onclick="goto()">&#128221</span> 
+-->
+
+</html>

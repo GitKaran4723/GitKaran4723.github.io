@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Timetable Sem 3 MCA(MSRIT)</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        .timetable-container {
+            width: 90%;
+            /* Adjust the width as needed */
+            margin: 0 auto;
+            overflow-x: auto;
+            /* Add horizontal scroll for small screens */
+        }
+
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 15px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #3498db;
+            color: #fff;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        select,
+        button {
+            padding: 8px;
+            font-size: 16px;
+            margin: 10px;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                height: 100vw;
+                background-color: green;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Timetable</h2>
+
+    <label for="days">Choose a day:</label>
+    <select id="days" name="days">
+        <option value="monday">Monday</option>
+        <option value="tuesday">Tuesday</option>
+        <option value="wednesday">Wednesday</option>
+        <option value="thursday">Thursday</option>
+        <option value="friday">Friday</option>
+        <option value="saturday">Saturday</option>
+    </select>
+    <button onclick="displayTimetable()">Show Timetable</button>
+
+    <div class="timetable-container">
+        <table id="timetable" style="display: none;">
+            <thead>
+                <tr>
+                    <th>Time</th>
+                    <th>Subject</th>
+                    <th>Faculty</th>
+                </tr>
+            </thead>
+            <tbody id="timetableBody">
+                <!-- Timetable content will be displayed here -->
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        const timetableData = {
+            monday: [
+                { time: '9:00 AM - 10:15 AM', subject: 'DevOps/MAD(Tut)', Faculty: 'AKL/SH' },
+                { time: '10:15 AM - 11:05 AM', subject: 'Tea Break', Faculty: '------' },
+                { time: '11:05 AM - 12:00 PM', subject: 'DT', Faculty: 'Ms. Komala R' },
+                { time: '12:00 PM - 12:55 PM', subject: 'SE', Faculty: 'Dr.S Ajitha' },
+                { time: '01:00 PM - 01:45 PM', subject: 'Lunch Time', Faculty: '------' },
+                { time: '01:45 PM - 02:40 PM', subject: 'IS', Faculty: 'Dr. Manish Kumar' },
+                { time: '02:40 PM - 04:30 PM', subject: 'IS Lab', Faculty: 'MK,MB,TS' }
+            ],
+            tuesday: [
+                { time: '9:00 AM - 09:55 AM', subject: 'AI/ML', Faculty: 'RG' },
+                { time: '09:55 AM - 10:50 AM', subject: 'IS', Faculty: 'MK' },
+                { time: '10:15 AM - 11:05 AM', subject: 'Tea Break', Faculty: '------' },
+                { time: '11:05 AM - 12:55 PM', subject: 'Cloud', Faculty: 'MB' },
+                { time: '01:00 PM - 01:45 PM', subject: 'Lunch Time', Faculty: '------' },
+                { time: '01:45 PM - 02:40 PM', subject: 'DT', Faculty: 'Ms. Komala R' },
+                { time: '02:40 PM - 04:30 PM', subject: 'SE(Tut)', Faculty: 'SA' }
+            ],
+            wednesday: [
+                { time: '9:00 AM - 09:55 AM', subject: 'IS', Faculty: 'MK' },
+                { time: '09:55 AM - 10:50 AM', subject: 'DT', Faculty: 'Ms. Komala R' },
+                { time: '10:15 AM - 11:05 AM', subject: 'Tea Break', Faculty: '------' },
+                { time: '11:05 AM - 12:55 PM', subject: 'ST/BigData(Tut)', Faculty: 'DEG/TS' },
+                { time: '01:00 PM - 01:45 PM', subject: 'Lunch Time', Faculty: '------' },
+                { time: '01:45 PM - 02:40 PM', subject: 'AI/ML', Faculty: 'RG' },
+                { time: '02:40 PM - 04:30 PM', subject: 'Cloud', Faculty: 'MB' }
+            ],
+            thursday: [
+
+                { time: '9:00 AM - 10:15 AM', subject: 'Cloud Lab', Faculty: 'MB,MK,AKL' },
+                { time: '10:15 AM - 11:05 AM', subject: 'Tea Break', Faculty: '------' },
+                { time: '11:05 AM - 12:55 PM', subject: 'ST/BigData', Faculty: 'DEG,SH,NF/TS,MB,RG' },
+                { time: '01:00 PM - 01:45 PM', subject: 'Lunch Time', Faculty: '------' },
+                { time: '01:45 PM - 02:40 PM', subject: 'SE', Faculty: 'SA' },
+                { time: '02:40 PM - 04:30 PM', subject: 'AI/ML Lab', Faculty: 'SA,DEG,TM' }
+            ],
+            friday: [
+                { time: '9:00 AM - 10:15 AM', subject: 'ST/BigData', Faculty: 'DEG,SH,NF/TS,MB,RG' },
+                { time: '10:15 AM - 11:05 AM', subject: 'Tea Break', Faculty: '------' },
+                { time: '11:05 AM - 12:00 PM', subject: 'SE', Faculty: 'SA' },
+                { time: '12:00 PM - 12:55 PM', subject: 'ML', Faculty: 'RG' },
+                { time: '01:00 PM - 01:45 PM', subject: 'Lunch Time', Faculty: '------' },
+                { time: '01:45 PM - 03:35 PM', subject: 'MAD', Faculty: 'SH' },
+                { time: '03:35 PM - 04:30 PM', subject: 'Proctor Meeting', Faculty: 'Proctor' }
+            ],
+            saturday: [
+                { time: '9:00 AM - 10:15 AM', subject: 'DevOps/MAD(Lab)', Faculty: 'AKL,TS,NF /SH,SA,DEG' },
+                { time: '11:05 AM - 12:55 PM', subject: 'Project Phase 1', Faculty: 'Project Guide' }
+
+            ]
+        };
+
+
+        function displayTimetable() {
+            const selectedDay = document.getElementById('days').value;
+            const timetable = timetableData[selectedDay];
+            const tbody = document.getElementById('timetableBody');
+
+            tbody.innerHTML = '';
+
+            timetable.forEach(session => {
+                const row = document.createElement('tr');
+                const timeCell = document.createElement('td');
+                const subjectCell = document.createElement('td');
+                const facultyCell = document.createElement('td');
+
+                timeCell.textContent = session.time;
+                subjectCell.textContent = session.subject;
+                facultyCell.textContent = session.Faculty;
+
+                row.appendChild(timeCell);
+                row.appendChild(subjectCell);
+                row.appendChild(facultyCell);
+                tbody.appendChild(row);
+            });
+
+            document.getElementById('timetable').style.display = 'table';
+        }
+    </script>
+</body>
+
+</html>
