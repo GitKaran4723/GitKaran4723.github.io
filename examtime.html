@@ -89,7 +89,7 @@
                 <td>22.02.2024, Thursday</td>
                 <td class="subject1">MCA31 - Software Engineering and Agile Methodologies</td>
 
-                <td>Completed</td>
+                <td id="exam3_remaining"></td>
             </tr>
             <tr>
                 <td>24.02.2024, Saturday</td>
@@ -168,7 +168,7 @@
         }
 
         // Call the function for each exam initially
-        //calculateRemainingTime("2024-02-22T09:30:00", "exam1_remaining");
+        calculateRemainingTime("2024-02-22T09:30:00", "exam1_remaining");
         calculateRemainingTime("2024-02-24T09:30:00", "exam2_remaining");
         calculateRemainingTime("2024-02-26T09:30:00", "exam3_remaining");
         calculateRemainingTime("2024-02-28T09:30:00", "exam4_remaining");
@@ -177,9 +177,10 @@
         calculateRemainingTime("2024-03-13T09:00:00", "exam7_remaining");
         calculateRemainingTime("2024-03-15T09:00:00", "exam8_remaining");
 
+        
         // Update remaining time every second
         setInterval(function () {
-            //calculateRemainingTime("2024-02-22T09:30:00", "exam1_remaining");
+            calculateRemainingTime("2024-02-22T09:30:00", "exam1_remaining");
             calculateRemainingTime("2024-02-24T09:30:00", "exam2_remaining");
             calculateRemainingTime("2024-02-26T09:30:00", "exam3_remaining");
             calculateRemainingTime("2024-02-28T09:30:00", "exam4_remaining");
