@@ -89,7 +89,7 @@
                 <td>22.02.2024, Thursday</td>
                 <td class="subject1">MCA31 - Software Engineering and Agile Methodologies</td>
 
-                <td id="exam1_remaining"></td>
+                <td>Completed</td>
             </tr>
             <tr>
                 <td>24.02.2024, Saturday</td>
@@ -106,8 +106,40 @@
             <tr>
                 <td>28.02.2024, Wednesday</td>
                 <td class="subject4">MCAE63 - Design Thinking <br>MCAE61 - Software Project Management</td>
-
                 <td id="exam4_remaining"></td>
+            </tr>
+        </tbody>
+    </table>
+<!--This is for practical papers-->
+    <table>
+        <caption>M.C.A. Practical EXAMINATIONS - March 2024</caption>
+        <thead>
+            <tr>
+                <th>Start Date & Day</th>
+                <th>Course Code & Title</th>
+                <th>Remaining Time</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>06.03.2024, Wednesday</td>
+                <td class="subject5">MCA34 - Cloud Computing</td>
+                <td id="exam5_remaining"></td>
+            </tr>
+            <tr>
+                <td>11.03.2024, Monday</td>
+                <td class="subject6">MCAE44 - Bigdata Analytics</td>
+                <td id="exam6_remaining"></td>
+            </tr>
+            <tr>
+                <td>13.03.2024, Wednesday</td>
+                <td class="subject7">MCAE52 - Mobile Application Development</td>
+                <td id="exam7_remaining"></td>
+            </tr>
+            <tr>
+                <td>15.03.2024, Friday</td>
+                <td class="subject8">MCAP1 - Mini Project</td>
+                <td id="exam8_remaining"></td>
             </tr>
         </tbody>
     </table>
@@ -125,24 +157,36 @@
             var seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
 
             if(days<0){
-                document.getElementById(elementId).innerText = "Completed";
-            }else{
+                document.getElementById(elementId).innerText = "Exam Completed";
+            }
+            else{
                 document.getElementById(elementId).innerText = days + " D " + hours + " H " + minutes + " m " + seconds + " s";
             }
+            
+            
+            
         }
 
         // Call the function for each exam initially
-        calculateRemainingTime("2024-02-22T09:30:00", "exam1_remaining");
+        //calculateRemainingTime("2024-02-22T09:30:00", "exam1_remaining");
         calculateRemainingTime("2024-02-24T09:30:00", "exam2_remaining");
         calculateRemainingTime("2024-02-26T09:30:00", "exam3_remaining");
         calculateRemainingTime("2024-02-28T09:30:00", "exam4_remaining");
+        calculateRemainingTime("2024-03-06T09:00:00", "exam5_remaining");
+        calculateRemainingTime("2024-03-11T09:00:00", "exam6_remaining");
+        calculateRemainingTime("2024-03-13T09:00:00", "exam7_remaining");
+        calculateRemainingTime("2024-03-15T09:00:00", "exam8_remaining");
 
         // Update remaining time every second
         setInterval(function () {
-            calculateRemainingTime("2024-02-22T09:30:00", "exam1_remaining");
+            //calculateRemainingTime("2024-02-22T09:30:00", "exam1_remaining");
             calculateRemainingTime("2024-02-24T09:30:00", "exam2_remaining");
             calculateRemainingTime("2024-02-26T09:30:00", "exam3_remaining");
             calculateRemainingTime("2024-02-28T09:30:00", "exam4_remaining");
+            calculateRemainingTime("2024-03-06T09:00:00", "exam5_remaining");
+            calculateRemainingTime("2024-03-11T09:00:00", "exam6_remaining");
+            calculateRemainingTime("2024-03-13T09:00:00", "exam7_remaining");
+            calculateRemainingTime("2024-03-15T09:00:00", "exam8_remaining");
         }, 1000); // Update every second
     </script>
 
