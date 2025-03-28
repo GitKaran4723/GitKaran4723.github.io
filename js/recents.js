@@ -5,15 +5,17 @@ let recents = [];
 let showingAll = false;
 
 async function loadRecents() {
-  const res = await fetch('data/recents.json');
-  recents = await res.json();
-  renderRecents();
+  try {
+    const res = await fetch('data/recents.json', { cache: "no-store" });
+    recents = await res.json();
+    renderRecents();
+  } catch (err) {
+    console.error("Failed to load recents:", err);
+  }
 }
 
 function renderRecents() {
   recentsList.innerHTML = '';
-
-
 
   const items = showingAll ? recents : recents.slice(0, 3);
 
@@ -31,4 +33,7 @@ showMoreBtn.addEventListener('click', () => {
   renderRecents();
 });
 
-loadRecents();
+loadRecents(); // Initial load
+
+// ✅ Refresh every 30 seconds
+setInterval(loadRecents, 30000);
