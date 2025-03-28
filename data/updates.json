@@ -1,1 +1,16 @@
-[ ] 
+[
+    {
+        "date": "2024-08-21",
+        "time": "10:30 AM",
+        "update": "New Blog on Web Security",
+        "description": "Learn about modern web security practices and how to secure your apps.",
+        "details": "### Web Security Guide\n\n- **Use HTTPS** for secure communication\n- **Sanitize User Input** to prevent XSS attacks\n- **Implement Authentication Properly**\n\nRead more about it [here](https://yourblog.com/web-security)."
+    },
+    {
+        "date": "2024-08-20",
+        "time": "3:15 PM",
+        "update": "Added UPSC Notes",
+        "description": "Comprehensive notes on UPSC Prelims and Mains available now.",
+        "details": "## UPSC Notes Update\n\nWe have added:\n- **History and Polity Notes**\n- **Current Affairs Analysis**\n\nStart studying now!"
+    }
+]
