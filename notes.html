@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Notes</title>
+
+  <!-- ✅ Custom Styling -->
+  <link rel="stylesheet" href="css/notes.css" />
+
+  <!-- ✅ KaTeX for LaTeX rendering -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+
+  <!-- ✅ Marked.js for Markdown rendering -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1 class="main-title">📚 My Notes</h1>
+
+    <div id="notes-list" class="notes-list"></div>
+    <hr />
+    <div id="note-content" class="note-content hidden"></div>
+  </div>
+
+  <script src="js/notes.js"></script>
+</body>
+</html>

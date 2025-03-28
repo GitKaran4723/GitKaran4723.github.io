@@ -1,0 +1,35 @@
+{
+  "Computer Science": [
+    {
+      "title": "Introduction to Data Structures",
+      "filename": "cs_intro_data_structures.md",
+      "date": "2025-03-28"
+    },
+    {
+      "title": "Algorithms Basics",
+      "filename": "cs_algorithms_basics.md",
+      "date": "2025-03-29"
+    }
+  ],
+  "Chemistry": [
+    {
+      "title": "Atomic Structure",
+      "filename": "chem_atomic_structure.md",
+      "date": "2025-03-28"
+    }
+  ],
+  "ugc-net_paper_1": [
+    {
+      "title": "Reasoning",
+      "filename": "net_reasoning.md",
+      "date": "2025-03-28"
+    }
+  ],
+  "Polity": [
+    {
+      "title": "Historical Background",
+      "filename" : "historical_background.md",
+      "date": "2025-03-28"
+    }
+  ]
+}
