@@ -13,6 +13,8 @@ async function loadRecents() {
 function renderRecents() {
   recentsList.innerHTML = '';
 
+
+
   const items = showingAll ? recents : recents.slice(0, 3);
 
   items.forEach(entry => {
