@@ -1,0 +1,32 @@
+[
+    {
+        "title": "Understanding Data Structures",
+        "description": "A deep dive into data structures with examples and use cases.",
+        "image": "https://source.unsplash.com/600x400/?technology,code",
+        "link": "https://yourblog.com/data-structures"
+    },
+    {
+        "title": "Web Programming Essentials",
+        "description": "A guide to modern web development with hands-on tutorials.",
+        "image": "https://source.unsplash.com/600x400/?web,development",
+        "link": "https://yourblog.com/web-programming"
+    },
+    {
+        "title": "Aptitude Tricks for Competitive Exams",
+        "description": "Quick tips and tricks to master aptitude questions.",
+        "image": "https://source.unsplash.com/600x400/?math,puzzle",
+        "link": "https://yourblog.com/aptitude-tips"
+    },
+    {
+        "title": "Mastering Python for AI",
+        "description": "Explore how Python is used in AI and machine learning applications.",
+        "image": "https://source.unsplash.com/600x400/?python,ai",
+        "link": "https://yourblog.com/python-ai"
+    },
+    {
+        "title": "Competitive Coding Best Practices",
+        "description": "Improve your competitive coding skills with real-world strategies.",
+        "image": "https://source.unsplash.com/600x400/?programming,coding",
+        "link": "https://yourblog.com/competitive-coding"
+    }
+]

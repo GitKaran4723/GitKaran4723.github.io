@@ -1,6 +1,6 @@
 /* Global styles (optional) */ 
 body {
-    padding-bottom: 64px;
+    padding-bottom: 0px;
   }
   #mobileMenu {
     transition: transform 0.3s ease, opacity 0.3s ease;
