@@ -59,14 +59,3 @@ But perhaps, *it is this very pain that makes us truly alive*.
 
 ---
 
-## 🔸 Short Version (For Instagram / LinkedIn)
-
-🧠 *When we are more humane, we live more pains.*  
-But maybe that's not a flaw — maybe it's our strength.
-
-We feel more because we care more.  
-We carry silent griefs that aren't even ours.  
-But in doing so, we keep humanity alive in a world that’s forgetting how to feel.
-
-*To feel deeply is to live deeply.* 🌿  
-#Empathy #Humanity #Emotions #MentalHealth #BlogThoughts
