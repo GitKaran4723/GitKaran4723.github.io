@@ -1,16 +1,23 @@
 [
     {
-        "date": "2024-08-21",
-        "time": "10:30 AM",
-        "update": "New Blog on Web Security",
-        "description": "Learn about modern web security practices and how to secure your apps.",
-        "details": "### Web Security Guide\n\n- **Use HTTPS** for secure communication\n- **Sanitize User Input** to prevent XSS attacks\n- **Implement Authentication Properly**\n\nRead more about it [here](https://yourblog.com/web-security)."
+        "date": "2025-04-04",
+        "time": "4:30 PM",
+        "update": "New Blog by My Sister",
+        "description": "A thoughtful piece written by my sister, exploring love, family, and finding balance.",
+        "details": "### Are Parents Always Right in Matters of Love and Marriage?\n\nA blog that beautifully captures the emotional conflict between love and tradition, urging readers to find balance between family and personal choice.\n\n📖 [Read her blog here](/blogs.html)"
     },
     {
-        "date": "2024-08-20",
-        "time": "3:15 PM",
-        "update": "Added UPSC Notes",
-        "description": "Comprehensive notes on UPSC Prelims and Mains available now.",
-        "details": "## UPSC Notes Update\n\nWe have added:\n- **History and Polity Notes**\n- **Current Affairs Analysis**\n\nStart studying now!"
+        "date": "2025-04-04",
+        "time": "2:00 PM",
+        "update": "New Blog: Being More Humane",
+        "description": "A heartfelt reflection on empathy, kindness, and what it truly means to be human.",
+        "details": "## Being More Humane\n\nIn a world driven by speed and success, we often forget the simple acts of **listening**, **forgiving**, and **caring**. This blog is a reminder to pause, reflect, and return to our roots — **human connection**.\n\n👉 [Read the full blog here](/blogs.html)"
+    },
+    {
+        "date": "2025-04-04",
+        "time": "11:45 AM",
+        "update": "Fixed Notes Rendering",
+        "description": "Improved the display of notes to ensure better readability across all devices.",
+        "details": "### Notes Update\n\n- Resolved issues with **markdown rendering**\n- Enhanced layout for **mobile and desktop**\n- Improved **font consistency** and **section spacing**\n\nCheck out the new format now!"
     }
 ]
