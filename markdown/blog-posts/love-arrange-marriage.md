@@ -83,7 +83,4 @@ And let **patience** build the bridge between your heart and theirs.
 
 ---
 
-**🌸 What are your thoughts on love, family, and finding the balance? Share in the comments — your story might just help someone else write theirs.**
-
-
 - By Karuna Jadhav
