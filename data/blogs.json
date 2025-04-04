@@ -4,5 +4,11 @@
         "description": "There’s a strange irony in being human — the more we nurture empathy, the more we open ourselves to pain. The world praises compassion and emotional connection, yet rarely speaks of the silent suffering that shadows these virtues.",
         "image": "assets/images/blogs/humane.png",
         "link": "markdown/blog-posts/when-we-are-more-humane.md"
+    },
+    {
+        "title": "Are Parents Always Right in Matters of Love and Marriage?",
+        "description": "Love — that sudden spark, that quiet comfort, that wild rollercoaster of emotions — is one of life’s most beautiful experiences. It's spontaneous, raw, and often defies logic. But in a country like India, where family isn’t just a part of your life but often the center of it, love doesn’t always get the smooth path it deserves.",
+        "image": "assets/images/blogs/marriage.png",
+        "link": "markdown/blog-posts/love-arrange-marriage.md"
     }
 ]

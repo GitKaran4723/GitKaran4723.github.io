@@ -3,6 +3,8 @@
 
 > *"To be deeply human is to feel deeply — even when the pain is not ours."*
 
+![Header Image](assets/images/blogs/humane.png)
+
 There’s a strange irony in being human — the more we nurture empathy, the more we open ourselves to pain. The world praises compassion and emotional connection, yet rarely speaks of the silent suffering that shadows these virtues.
 
 In today's culture, emotional detachment is often mistaken for strength. Being “unbothered” is celebrated. But what if caring deeply is not a weakness, but a rare kind of bravery?
