@@ -1,5 +1,11 @@
 [
     {
+        "title": "Mocked as Superstition, Missed as Wisdom",
+        "description": "Ancient rituals, tribal traditions, and sacred beliefs were once dismissed as outdated. But in an age of climate crisis, they reveal themselves as powerful guides to ecological balance and sustainable living.",
+        "image": "assets/images/blogs/superstition.png",
+        "link": "markdown/blog-posts/mocked-as-superstition.md"
+    },    
+    {
         "title": "When We Are More Humane, We Live More Pains.",
         "description": "There’s a strange irony in being human — the more we nurture empathy, the more we open ourselves to pain. The world praises compassion and emotional connection, yet rarely speaks of the silent suffering that shadows these virtues.",
         "image": "assets/images/blogs/humane.png",
