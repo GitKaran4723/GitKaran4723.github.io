@@ -1,5 +1,7 @@
 # 🌿 **Mocked as Superstition, Missed as Wisdom: Rethinking Religion as Environmental Ethics**
 
+![Representational Image](assets/images/blogs/superstition.png)
+
 ### ✨ *“If we ignore the dharma of nature, nature will ignore the survival of our species.”*
 
 ---
