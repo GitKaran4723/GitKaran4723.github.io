@@ -120,7 +120,8 @@
                         const redirectUrl = `/rendernotes.html?mdUrl=${blog.link}&prevpage=blogs.html`;
                         window.location.href = redirectUrl;
                     } else {
-                        document.getElementById('blog-container').innerHTML = "<p class='text-red-600 text-center text-lg'>Sorry, blog not found.</p>";
+                        // document.getElementById('blog-container').innerHTML = "<p class='text-red-600 text-center text-lg'>Sorry, blog not found.</p>";
+                        window.location.href = '/blogs.html'
                     }
                 });
         }
