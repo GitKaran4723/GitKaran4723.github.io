@@ -116,6 +116,7 @@
                 .then(blogs => {
                     const blog = blogs.find(b => b.slug === slugParam);
                     if (blog) {
+                        
                         // Redirect to the actual blog rendering page
                         const redirectUrl = `/rendernotes.html?mdUrl=${blog.link}&prevpage=blogs.html`;
                         window.location.href = redirectUrl;
