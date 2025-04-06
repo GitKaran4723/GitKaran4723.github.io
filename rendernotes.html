@@ -426,7 +426,7 @@
 
         <!-- <button onclick="speakFromCurrent()">🔊</button> -->
 
-        <span>Happy Reading... use ⚙️ button to customise your reading</span>
+        <span>Happy Reading...</span>
 
         <button class="settings-icon" onclick="toggleSettings()">⚙️</button>
 
@@ -461,7 +461,7 @@
                 if (navigator.share) {
                     navigator.share({
                         title: blog.title,
-                        text: "Check out this blog from EchoSphere!",
+                        text: "Check out this blog by KS Jadhav!",
                         url: shareUrl
                     }).catch(err => console.error('Error sharing:', err));
                 } else {
