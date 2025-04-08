@@ -48,7 +48,7 @@
     async function loadVideosAndNotes() {
         const params = new URLSearchParams(url.search);
 
-        const chapter = params.get('playlistID');
+        const playlistId = params.get('playlistID');
 
       const apiURL = apiURL = `https://karan4723.pythonanywhere.com/api/playlist/aptitude/${playlistId}`;;  // Replace as needed
       const notesURL = './data/playlistnoteslinks.json';
