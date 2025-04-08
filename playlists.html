@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>YouTube Playlist with Notes</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #f4f4f4;
+    }
+    .video-card {
+      background: white;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      padding: 15px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      display: flex;
+      gap: 20px;
+    }
+    .video-card img {
+      border-radius: 10px;
+    }
+    .video-info {
+      flex-grow: 1;
+    }
+    .video-info h3 {
+      margin: 0;
+    }
+    .video-info p {
+      margin: 5px 0;
+    }
+    .notes-link {
+      margin-top: 10px;
+    }
+    .notes-link a {
+      color: #007bff;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>YouTube Aptitude Series</h1>
+  <div id="video-container"></div>
+
+  <script>
+    async function loadVideosAndNotes() {
+        const params = new URLSearchParams(url.search);
+
+        const chapter = params.get('playlistID');
+
+      const apiURL = apiURL = `https://karan4723.pythonanywhere.com/api/playlist/aptitude/${playlistId}`;;  // Replace as needed
+      const notesURL = './data/noteslinks.json';
+
+      const [videoRes, notesRes] = await Promise.all([
+        fetch(apiURL),
+        fetch(notesURL)
+      ]);
+
+      const videos = await videoRes.json();
+      const notesList = await notesRes.json();
+
+      const container = document.getElementById('video-container');
+
+      videos.forEach(video => {
+        const note = notesList.find(n => n.title === video.title);
+        const notesHTML = note ? `<div class="notes-link">📘 <a href="/rendernotes.html?mdUrl=${note.notes}" target="_blank">Download Notes</a></div>` : "";
+
+        container.innerHTML += `
+          <div class="video-card">
+            <a href="https://www.youtube.com/watch?v=${video.videoId}" target="_blank">
+              <img src="${video.thumbnail}" width="200" />
+            </a>
+            <div class="video-info">
+              <h3>${video.title}</h3>
+              <p>${video.description || "No description available."}</p>
+              <p><strong>Published:</strong> ${new Date(video.publishedAt).toDateString()}</p>
+              ${notesHTML}
+            </div>
+          </div>
+        `;
+      });
+    }
+
+    loadVideosAndNotes();
+  </script>
+
+</body>
+</html>
