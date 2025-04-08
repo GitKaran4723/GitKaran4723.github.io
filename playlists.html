@@ -51,7 +51,7 @@
         const chapter = params.get('playlistID');
 
       const apiURL = apiURL = `https://karan4723.pythonanywhere.com/api/playlist/aptitude/${playlistId}`;;  // Replace as needed
-      const notesURL = './data/noteslinks.json';
+      const notesURL = './data/playlistnoteslinks.json';
 
       const [videoRes, notesRes] = await Promise.all([
         fetch(apiURL),
