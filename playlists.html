@@ -1,73 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <title>YouTube Playlist with Notes</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      padding: 20px;
-      background: #f4f4f4;
-    }
-    .video-card {
-      background: white;
-      border-radius: 10px;
-      margin-bottom: 20px;
-      padding: 15px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      display: flex;
-      gap: 20px;
-    }
-    .video-card img {
-      border-radius: 10px;
-    }
-    .video-info {
-      flex-grow: 1;
-    }
-    .video-info h3 {
-      margin: 0;
-    }
-    .video-info p {
-      margin: 5px 0;
-    }
-    .notes-link {
-      margin-top: 10px;
-    }
-    .notes-link a {
-      color: #007bff;
-      text-decoration: none;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <title>YouTube Playlist with Notes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #f4f4f4;
+        }
+
+        .video-card {
+            background: white;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            padding: 15px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            gap: 20px;
+        }
+
+        .video-card img {
+            border-radius: 10px;
+        }
+
+        .video-info {
+            flex-grow: 1;
+        }
+
+        .video-info h3 {
+            margin: 0;
+        }
+
+        .video-info p {
+            margin: 5px 0;
+        }
+
+        .notes-link {
+            margin-top: 10px;
+        }
+
+        .notes-link a {
+            color: #007bff;
+            text-decoration: none;
+        }
+    </style>
 </head>
+
 <body>
 
-  <h1>YouTube Aptitude Series</h1>
-  <div id="video-container"></div>
+    <h1>YouTube Aptitude Series</h1>
+    <div id="video-container"></div>
 
-  <script>
-    async function loadVideosAndNotes() {
-        const params = new URLSearchParams(url.search);
+    <script>
+        async function loadVideosAndNotes() {
+            const params = new URLSearchParams(window.location.search);  // 🔧 Fixed here
 
-        const playlistId = params.get('playlistID');
+            const playlistId = params.get('playlistID');
 
-      const apiURL = apiURL = `https://karan4723.pythonanywhere.com/api/playlist/aptitude/${playlistId}`;;  // Replace as needed
-      const notesURL = './data/playlistnoteslinks.json';
+            const apiURL = `https://karan4723.pythonanywhere.com/api/playlist/aptitude/${playlistId}`;
 
-      const [videoRes, notesRes] = await Promise.all([
-        fetch(apiURL),
-        fetch(notesURL)
-      ]);
+            const notesURL = './data/playlistnoteslinks.json';
 
-      const videos = await videoRes.json();
-      const notesList = await notesRes.json();
+            const [videoRes, notesRes] = await Promise.all([
+                fetch(apiURL),
+                fetch(notesURL)
+            ]);
 
-      const container = document.getElementById('video-container');
+            const videos = await videoRes.json();
+            const notesList = await notesRes.json();
 
-      videos.forEach(video => {
-        const note = notesList.find(n => n.title === video.title);
-        const notesHTML = note ? `<div class="notes-link">📘 <a href="/rendernotes.html?mdUrl=${note.notes}" target="_blank">Download Notes</a></div>` : "";
+            const container = document.getElementById('video-container');
 
-        container.innerHTML += `
+            videos.forEach(video => {
+                const note = notesList.find(n => n.title === video.title);
+                const notesHTML = note ? `<div class="notes-link">📘 <a href="/rendernotes.html?mdUrl=${note.notes}" target="_blank">Download Notes</a></div>` : "";
+
+                container.innerHTML += `
           <div class="video-card">
             <a href="https://www.youtube.com/watch?v=${video.videoId}" target="_blank">
               <img src="${video.thumbnail}" width="200" />
@@ -80,11 +90,12 @@
             </div>
           </div>
         `;
-      });
-    }
+            });
+        }
 
-    loadVideosAndNotes();
-  </script>
+        loadVideosAndNotes();
+    </script>
 
 </body>
+
 </html>
