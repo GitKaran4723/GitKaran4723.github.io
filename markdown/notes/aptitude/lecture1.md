@@ -1,7 +1,3 @@
-Here’s a detailed set of **notes on General Strategies for Solving Aptitude Series Questions**, organized with clear **concepts, strategies, and examples** to help you understand and apply them effectively.
-
----
-
 ## ✅ **GENERAL STRATEGIES FOR SERIES QUESTIONS**
 
 ---
@@ -172,7 +168,3 @@ Regular exposure helps identify common patterns quickly:
 | Prime | Prime numbers | 2, 3, 5, 7 | 11 |
 | Alternating | 2 sequences | 1, 4, 2, 5, 3 | 6 |
 | Complex | × + or ÷ - | 2, 5, 11, 23 | 47 |
-
----
-
-Would you like me to create **PDF notes** or **interactive flashcards (like Anki)** based on these strategies?
