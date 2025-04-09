@@ -50,7 +50,7 @@
 
 <body>
 
-    <h1>YouTube Aptitude Series</h1>
+    <h1>YouTube <span id="name_of_series"></span> Series</h1>
     <div id="video-container"></div>
 
     <script>
@@ -58,6 +58,14 @@
             const params = new URLSearchParams(window.location.search);  // 🔧 Fixed here
 
             const playlistId = params.get('playlistID');
+            const seriesName = params.get('seriesName');
+
+            // If a name is found, display it in the span
+            if (seriesName) {
+                document.getElementById('name_of_series').textContent = decodeURIComponent(seriesName);
+            } else {
+                document.getElementById('name_of_series').textContent = 'Video'; // default fallback
+            }
 
             const apiURL = `https://karan4723.pythonanywhere.com/api/playlist/aptitude/${playlistId}`;
 
