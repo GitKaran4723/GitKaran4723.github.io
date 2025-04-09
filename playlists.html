@@ -75,7 +75,7 @@
 
             videos.forEach(video => {
                 const note = notesList.find(n => n.title === video.title);
-                const notesHTML = note ? `<div class="notes-link">📘 <a href="/renderplaylistnotes.html.html?mdUrl=${note.notes}" >Read Notes</a></div>` : "";
+                const notesHTML = note ? `<div class="notes-link">📘 <a href="/renderplaylistnotes.html?mdUrl=${note.notes}" >Read Notes</a></div>` : "";
 
                 container.innerHTML += `
           <div class="video-card">
