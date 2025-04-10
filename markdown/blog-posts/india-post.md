@@ -4,6 +4,8 @@
 
 ---
 
+![Representational Image](assets/images/blogs/india-post.md)
+
 You know, in a world where WhatsApp messages fly faster than thoughts and AI writes everything from emails to poetry, it’s easy to ignore the good old red postbox. But take a walk through a remote village or a winding trail in Ladakh — and there it is, quietly standing, still very much in service. This isn’t just nostalgia. It’s evolution in action.
 
 Let me tell you a story. A story of how India Post didn’t just *survive* the digital revolution — it *thrived* in it. And along the way, it taught me something important: **resilience isn’t about resistance; it’s about reinvention.**
