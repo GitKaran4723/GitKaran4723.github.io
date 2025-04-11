@@ -52,12 +52,13 @@
       const params = new URLSearchParams(window.location.search);
       const playlistId = params.get('playlistID');
       const seriesName = params.get('seriesName');
+      const fileSeriesName = seriesName.charAt(0).toLowerCase() + seriesName.slice(1);
 
       // Set series name
       document.getElementById('name_of_series').textContent = seriesName ? decodeURIComponent(seriesName) : 'Video';
 
       const apiURL = `https://karan4723.pythonanywhere.com/api/playlist/aptitude/${playlistId}`;
-      const notesURL = './data/playlistnoteslinks.json';
+      const notesURL = `./data/playlistnoteslinks_${fileSeriesName}.json`;
 
       const [videoRes, notesRes] = await Promise.all([
         fetch(apiURL),
