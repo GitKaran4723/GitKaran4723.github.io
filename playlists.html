@@ -65,7 +65,11 @@
         fetch(notesURL)
       ]);
 
+
+
       const videos = await videoRes.json();
+
+      console.log(videos)
       const notesList = await notesRes.json();
       const container = document.getElementById('video-container');
 
