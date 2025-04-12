@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>RAG Gemini Study Assistant</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Tailwind & Markdown -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/typography@0.5.9/dist/typography.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+    <!-- Tailwind Config -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#3b82f6",
+            },
+          },
+        }
+      };
+    </script>
+  </head>
+
+  <body class="bg-gray-100 p-4 min-h-screen">
+    <div class="w-full max-w-md mx-auto bg-white p-4 rounded-lg shadow space-y-4">
+
+      <!-- Title -->
+      <h1 class="text-2xl font-bold text-center text-primary">
+        Study Assistant
+      </h1>
+
+      <!-- Tabs -->
+      <div class="flex flex-wrap gap-2 justify-between text-sm">
+        <button class="tab-btn flex-1 py-2 bg-blue-100 rounded" data-mode="video">🎥 Video</button>
+        <button class="tab-btn flex-1 py-2 bg-blue-100 rounded" data-mode="notes">📘 Notes</button>
+        <button class="tab-btn flex-1 py-2 bg-blue-100 rounded" data-mode="general">💬 General</button>
+      </div>
+
+      <!-- Prompt Input -->
+      <textarea
+        id="promptInput"
+        class="w-full p-3 border border-gray-300 rounded text-sm focus:ring-2 focus:ring-primary"
+        rows="4"
+        placeholder="Ask any general question..."
+      ></textarea>
+
+      <!-- Submit Button -->
+      <button
+        id="submitBtn"
+        class="w-full bg-primary text-white py-2 rounded text-sm hover:bg-blue-600 transition"
+      >
+        🚀 Ask
+      </button>
+
+      <!-- Loading Message -->
+      <p id="loadingMsg" class="text-sm text-gray-500 mt-2 hidden">
+        ⏳ Preparing your content, please wait...
+      </p>
+
+      <!-- Response Box -->
+      <div class="bg-slate-50 p-4 rounded border border-gray-200 max-h-72 overflow-auto">
+        <div
+          id="responseBox"
+          class="prose max-w-none text-gray-800 prose-headings:text-blue-700 
+          prose-strong:text-rose-600 prose-li:marker:text-blue-500 
+          prose-a:text-blue-600 prose-blockquote:border-l-4 
+          prose-blockquote:border-blue-400 prose-blockquote:bg-blue-50 
+          prose-blockquote:p-2 prose-blockquote:rounded"
+        ></div>
+      </div>
+
+      <!-- Copy Button -->
+      <button
+        id="copyBtn"
+        class="w-full bg-gray-200 px-3 py-2 rounded text-sm hover:bg-gray-300"
+      >
+        📋 Copy Response
+      </button>
+
+      <!-- Custom Styles -->
+      <style>
+        #responseBox * {
+          color: #1f2937 !important; /* Tailwind gray-800 */
+        }
+      </style>
+    </div>
+
+    <!-- Script Logic -->
+    <script>
+      let currentMode = "general";
+      const buttons = document.querySelectorAll(".tab-btn");
+      const promptInput = document.getElementById("promptInput");
+      const submitBtn = document.getElementById("submitBtn");
+      const responseBox = document.getElementById("responseBox");
+      const loadingMsg = document.getElementById("loadingMsg");
+
+      // Set default active tab
+      document.querySelector('[data-mode="general"]').classList.add("bg-blue-500", "text-white");
+      promptInput.placeholder = "Ask any general question...";
+
+      buttons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          currentMode = btn.getAttribute("data-mode");
+          buttons.forEach((b) => b.classList.remove("bg-blue-500", "text-white"));
+          btn.classList.add("bg-blue-500", "text-white");
+
+          if (currentMode === "video") {
+            promptInput.placeholder = "Enter YouTube video link or ID...";
+          } else if (currentMode === "notes") {
+            promptInput.placeholder = "Ask a question from your notes...";
+          } else {
+            promptInput.placeholder = "Ask any general question...";
+          }
+        });
+      });
+
+      // Copy to clipboard
+      document.getElementById("copyBtn").addEventListener("click", () => {
+        const temp = document.createElement("textarea");
+        temp.value = responseBox.innerText;
+        document.body.appendChild(temp);
+        temp.select();
+        document.execCommand("copy");
+        document.body.removeChild(temp);
+        alert("✅ Copied to clipboard!");
+      });
+
+      // Submit prompt
+      submitBtn.addEventListener("click", () => {
+        const prompt = promptInput.value.trim();
+        if (!prompt) return alert("Please enter your input.");
+
+        responseBox.textContent = "";
+        loadingMsg.classList.remove("hidden");
+        submitBtn.disabled = true;
+
+        fetch("https://karan4723.pythonanywhere.com/api/ask", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ prompt, mode: currentMode }),
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            loadingMsg.classList.add("hidden");
+            submitBtn.disabled = false;
+
+            if (data.error) {
+              responseBox.textContent = "❌ Error: " + data.error;
+            } else {
+              responseBox.innerHTML = marked.parse(data.response);
+              responseBox.scrollIntoView({ behavior: "smooth" });
+            }
+          })
+          .catch((err) => {
+            loadingMsg.classList.add("hidden");
+            submitBtn.disabled = false;
+            responseBox.textContent = "❌ Request failed: " + err.message;
+          });
+      });
+    </script>
+  </body>
+</html>
