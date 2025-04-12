@@ -68,14 +68,33 @@
     </nav>
   </div>
 
-  <!-- Hero Section -->
-  <section class="py-10 px-4 text-center bg-gradient-to-b from-indigo-800 to-purple-800 text-white">
-    <img src="/assets/images/profile.jpg" alt="Your Photo" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg border-2 border-white">
-    <h2 class="text-3xl font-bold mb-2">Hi, I'm Karan Sambhaji Jadhav</h2>
-    <p class="max-w-xl mx-auto text-lg">
-      I'm a Computer Science lecturer at Bangalore University with an MCA from Ramaiah Institute of Technology. I've qualified UGC-NET, SET, and GATE. I teach subjects like Discrete Structures, Web Programming, Java, Data Structures, and Shell Programming. Welcome to my digital space!
-    </p>
-      </section>
+  <!-- 🔵 Top SVG Shape -->
+  <!-- 🧑 Hero Section with Polygon Backgrounds -->
+<section class="relative py-16 px-4 text-center bg-gradient-to-b from-indigo-800 to-purple-800 text-white overflow-hidden">
+
+  <!-- 🔷 Top-Left Polygon -->
+  <svg class="absolute top-4 left-4 w-24 opacity-20 z-0" viewBox="0 0 100 100">
+    <polygon fill="#ffffff" points="50,0 100,100 0,100" />
+  </svg>
+
+  <!-- 🔶 Bottom-Right Polygon -->
+  <svg class="absolute bottom-4 right-4 w-32 opacity-20 z-0" viewBox="0 0 100 100">
+    <polygon fill="#ffffff" points="50,0 100,100 0,100" />
+  </svg>
+
+  <!-- 🔳 Center Floating Polygon -->
+  <svg class="absolute top-1/2 left-1/2 w-40 opacity-10 transform -translate-x-1/2 -translate-y-1/2 z-0" viewBox="0 0 100 100">
+    <polygon fill="#ffffff" points="50,0 100,50 50,100 0,50" />
+  </svg>
+
+  <!-- 👤 Profile Content (z-10 so it appears above polygons) -->
+  <img src="/assets/images/profile.jpg" alt="Your Photo" class="relative z-10 w-32 h-32 rounded-full mx-auto mb-4 shadow-lg border-2 border-white">
+  <h2 class="relative z-10 text-3xl font-bold mb-2">Hi, I'm Karan</h2>
+  <p class="relative z-10 max-w-xl mx-auto text-lg">
+   Welcome to my digital space!
+  </p>
+</section>
+
 
   <!-- Quick Access Grid -->
   <section class="py-10 px-4">
