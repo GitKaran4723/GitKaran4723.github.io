@@ -1,59 +1,62 @@
 [
-    {
-      "title": "L1 | Aptitude Training",
-      "notes": "/markdown/notes/aptitude/lecture1.md"
-    },
-    {
-      "title": "L2 | Number series example | different types | solutions and explaination",
-      "notes": "/markdown/notes/aptitude/lecture2.md"
-    },
-    {
-      "title": "L3 | Alphabetical Series | Examples with solutions | Aptitude",
-      "notes": "/markdown/notes/aptitude/lecture3.md"
-    },
-    {
-      "title": "L4 | Coding and Decoding | Example | Aptitude",
-      "notes": "/markdown/notes/aptitude/lecture4.md"
-    },
-    {
-      "title": "L5 | Coding and Decoding | Examples | Aptitude",
-      "notes": "/markdown/notes/aptitude/lecture5.md"
-    },
-    {
-      "title": "L6 | Classification Problems | odd man out | Examples",
-      "notes": "/markdown/notes/aptitude/lecture6.md"
-    },
-    {
-      "title": "L7 | Similar Word | Alphabet Analogy | example Solved | Aptitude series",
-      "notes": "/markdown/notes/aptitude/lecture7.md"
-    },
-    {
-      "title": "L8 | Blood Relations | Aptititude | examples",
-      "notes": "/markdown/notes/aptitude/lecture8.md"
-    },
-    {
-      "title": "L9 | Directions | Aptitude Examples",
-      "notes": "/markdown/notes/aptitude/lecture9.md"
-    },
-    {
-      "title": "L10 | Seating Arrangements | Aptitude with examples",
-      "notes": "/markdown/notes/aptitude/lecture10.md"
-    },
-    {
-      "title": "L11 | Percentage Part 1 | Aptitude",
-      "notes": "/markdown/notes/aptitude/lecture11.md"
-    },
-    {
-      "title": "L12 | Percentage Part 2 | Aptitude",
-      "notes": "/markdown/notes/aptitude/lecture12.md"
-    },
-    {
-      "title": "L13 | Percentage Part 3 | Advanced Questions | Aptitude",
-      "notes": "/markdown/notes/aptitude/lecture13.md"
-    },
-    {
-      "title": "L14 | Percentage Part 4 | Examples | Aptitude",
-      "notes": "/markdown/notes/aptitude/lecture14.md"
-    }
-  ]
-  
+  {
+    "title": "L1 | Aptitude Training",
+    "notes": "/markdown/notes/aptitude/lecture1.md"
+  },
+  {
+    "title": "L2 | Number series example | different types | solutions and explaination",
+    "notes": "/markdown/notes/aptitude/lecture2.md"
+  },
+  {
+    "title": "L3 | Alphabetical Series | Examples with solutions | Aptitude",
+    "notes": "/markdown/notes/aptitude/lecture3.md"
+  },
+  {
+    "title": "L4 | Coding and Decoding | Example | Aptitude",
+    "notes": "/markdown/notes/aptitude/lecture4.md"
+  },
+  {
+    "title": "L5 | Coding and Decoding | Examples | Aptitude",
+    "notes": "/markdown/notes/aptitude/lecture5.md"
+  },
+  {
+    "title": "L6 | Classification Problems | odd man out | Examples",
+    "notes": "/markdown/notes/aptitude/lecture6.md"
+  },
+  {
+    "title": "L7 | Similar Word | Alphabet Analogy | example Solved | Aptitude series",
+    "notes": "/markdown/notes/aptitude/lecture7.md"
+  },
+  {
+    "title": "L8 | Blood Relations | Aptititude | examples",
+    "notes": "/markdown/notes/aptitude/lecture8.md"
+  },
+  {
+    "title": "L9 | Directions | Aptitude Examples",
+    "notes": "/markdown/notes/aptitude/lecture9.md"
+  },
+  {
+    "title": "L10 | Seating Arrangements | Aptitude with examples",
+    "notes": "/markdown/notes/aptitude/lecture10.md"
+  },
+  {
+    "title": "L11 | Percentage Part 1 | Aptitude",
+    "notes": "/markdown/notes/aptitude/lecture11.md"
+  },
+  {
+    "title": "L12 | Percentage Part 2 | Aptitude",
+    "notes": "/markdown/notes/aptitude/lecture12.md"
+  },
+  {
+    "title": "L13 | Percentage Part 3 | Advanced Questions | Aptitude",
+    "notes": "/markdown/notes/aptitude/lecture13.md"
+  },
+  {
+    "title": "L14 | Percentage Part 4 | Examples | Aptitude",
+    "notes": "/markdown/notes/aptitude/lecture14.md"
+  },
+  {
+    "title": "L15 | Average Part 1 | Aptitude | Example with explaination",
+    "notes": "/markdown/notes/aptitude/lecture15.md"
+  }
+]
