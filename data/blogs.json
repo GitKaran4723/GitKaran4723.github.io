@@ -1,5 +1,12 @@
 [
     {
+        "title": "Rethinking Marriage and Children",
+        "description": "n a world that is rapidly evolving socially, economically, and philosophically, it is time to pause and ask: Is marriage truly essential? Is having children the only way to find meaning in life?",
+        "image": "assets/images/blogs/rethinking_marriage.png",
+        "link": "markdown/blog-posts/rethinking_marriage.md",
+        "slug": "blog6"
+    },
+    {
         "title": "Change Is the Only Constant – A Lesson from India Post",
         "description": "You know, in a world where WhatsApp messages fly faster than thoughts and AI writes everything from emails to poetry, it’s easy to ignore the good old red postbox. But take a walk through a remote village or a winding trail in Ladakh — and there it is, quietly standing, still very much in service. This isn’t just nostalgia. It’s evolution in action.",
         "image": "assets/images/blogs/india-post.png",
